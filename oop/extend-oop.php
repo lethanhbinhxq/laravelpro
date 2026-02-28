@@ -7,7 +7,14 @@ class A {
     }
 }
 
-class B extends A {}
+class B extends A {
+    public $attr_2;
+    public function method_2() {
+        echo $this->attr_2;
+    }
+}
 
 $b = new B();
-$b->method_1();
+$b->attr_2 = "Class B";
+// $b->method_1();
+$b->method_2();
