@@ -4,6 +4,8 @@
 
 @section('content')
 <p>Nội dung trang con</p>
+<p>Họ và tên: {{ $data }}</p>
+<p>HTML: {!! $html !!}</p>
 @endsection
 
 @section('sidebar')
