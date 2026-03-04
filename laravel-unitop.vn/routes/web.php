@@ -29,7 +29,22 @@ Route::get('/', function () {
 //     return view('for', ['n'=>'20']);
 // });
 
-Route::get('foreach', function(){
+// Route::get('foreach', function(){
+//     $users = array(
+//         1 => array(
+//             'name' => 'Lê Thanh Bình'
+//         ),
+//         2 => array(
+//             'name' => 'Nguyễn Văn A'
+//         ),
+//         3 => array(
+//             'name' => 'Trần Thị C'
+//         )
+//     );
+//     return view('foreach', compact('users'));
+// });
+
+Route::get('php', function(){
     $users = array(
         1 => array(
             'name' => 'Lê Thanh Bình'
@@ -41,5 +56,5 @@ Route::get('foreach', function(){
             'name' => 'Trần Thị C'
         )
     );
-    return view('foreach', compact('users'));
+    return view('php', compact('users'));
 });
