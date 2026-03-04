@@ -59,6 +59,10 @@ Route::get('/', function () {
 //     return view('php', compact('users'));
 // });
 
-Route::get('demo', function() {
-    return view('demo');
+// Route::get('demo', function() {
+//     return view('demo');
+// });
+
+Route::get('child', function() {
+    return view('child', ['data'=>4, 'post_title'=>'Khóa học Laravel Pro']);
 });
