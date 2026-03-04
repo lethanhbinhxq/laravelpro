@@ -44,17 +44,21 @@ Route::get('/', function () {
 //     return view('foreach', compact('users'));
 // });
 
-Route::get('php', function(){
-    $users = array(
-        1 => array(
-            'name' => 'Lê Thanh Bình'
-        ),
-        2 => array(
-            'name' => 'Nguyễn Văn A'
-        ),
-        3 => array(
-            'name' => 'Trần Thị C'
-        )
-    );
-    return view('php', compact('users'));
+// Route::get('php', function(){
+//     $users = array(
+//         1 => array(
+//             'name' => 'Lê Thanh Bình'
+//         ),
+//         2 => array(
+//             'name' => 'Nguyễn Văn A'
+//         ),
+//         3 => array(
+//             'name' => 'Trần Thị C'
+//         )
+//     );
+//     return view('php', compact('users'));
+// });
+
+Route::get('demo', function() {
+    return view('demo');
 });
