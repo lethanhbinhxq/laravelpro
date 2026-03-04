@@ -21,5 +21,6 @@ Route::get('/', function () {
 // Route::get('admin/post/delete/{id}', [AdminPostController::class, 'delete']);
 
 Route::get('child', function() {
-    return view('child', ['data' => 'Lê Thanh Bình', 'html'=>'<strong>Lê Thanh Bình</strong>']);
+    // return view('child', ['data' => 'Lê Thanh Bình', 'html'=>'<strong>Lê Thanh Bình</strong>']);
+    return view('child', ['data' => 4]);
 });
