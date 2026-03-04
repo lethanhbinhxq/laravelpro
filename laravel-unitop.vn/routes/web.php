@@ -25,6 +25,21 @@ Route::get('/', function () {
 //     return view('child', ['data' => 4]);
 // });
 
-Route::get('for', function(){
-    return view('for', ['n'=>'20']);
+// Route::get('for', function(){
+//     return view('for', ['n'=>'20']);
+// });
+
+Route::get('foreach', function(){
+    $users = array(
+        1 => array(
+            'name' => 'Lê Thanh Bình'
+        ),
+        2 => array(
+            'name' => 'Nguyễn Văn A'
+        ),
+        3 => array(
+            'name' => 'Trần Thị C'
+        )
+    );
+    return view('foreach', compact('users'));
 });
