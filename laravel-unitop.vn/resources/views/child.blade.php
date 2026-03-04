@@ -11,6 +11,8 @@
 
 @if ($data % 2 == 0)
 <p>{{ $data }} là số chẫn</p>
+@else
+<p>{{ $data }} là số lẻ</p>
 @endif
 
 @endsection
