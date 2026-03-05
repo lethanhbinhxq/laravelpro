@@ -29,12 +29,12 @@ class AdminPostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id=0)
+    public function show()
     {
         //
         // if ($id) return "Admin: Chi tiết bài viết có id: {$id}";
         // return "Admin: Danh sách bài viết";
-        return view('admin.post.show', compact('id'));
+        return view('admin.post.show');
     }
 
     /**

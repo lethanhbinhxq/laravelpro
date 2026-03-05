@@ -68,5 +68,6 @@ Route::get('/', function () {
 // });
 
 // ======= Exercise View =======
-Route::get('admin/post/show/{id?}', [AdminPostController::class, 'show']);Route::get('admin/post/add', [AdminPostController::class, 'add']);
+Route::get('admin/post/show', [AdminPostController::class, 'show']);
+Route::get('admin/post/add', [AdminPostController::class, 'add']);
 Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);
