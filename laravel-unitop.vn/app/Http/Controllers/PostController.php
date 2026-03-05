@@ -57,11 +57,15 @@ class PostController extends Controller
         //
         // return "Hiển thị bài viết";
         // $posts = DB::table('posts')->get();
-        $posts = DB::table('posts')->select('title');
-        foreach ($posts as $post) {
-            echo $post->title;
-            echo "<br>";
-        }
+        // $posts = DB::table('posts')->select('title');
+        // foreach ($posts as $post) {
+        //     echo $post->title;
+        //     echo "<br>";
+        // }
+
+        $post = DB::table('posts')->where('id', 1)->first();
+        echo $post->title;
+        // print_r($post);
         // return $posts;
     }
 
