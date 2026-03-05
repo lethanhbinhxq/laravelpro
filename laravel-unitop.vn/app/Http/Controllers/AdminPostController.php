@@ -19,10 +19,11 @@ class AdminPostController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function add()
     {
         //
-        return "Admin: Thêm bài viết";
+        // return "Admin: Thêm bài viết";
+        return view('admin.post.add');
     }
 
     /**
@@ -31,8 +32,9 @@ class AdminPostController extends Controller
     public function show($id=0)
     {
         //
-        if ($id) return "Admin: Chi tiết bài viết có id: {$id}";
-        return "Admin: Danh sách bài viết";
+        // if ($id) return "Admin: Chi tiết bài viết có id: {$id}";
+        // return "Admin: Danh sách bài viết";
+        return view('admin.post.show', compact('id'));
     }
 
     /**
@@ -41,7 +43,8 @@ class AdminPostController extends Controller
     public function update($id)
     {
         //
-        return "Admin: Cập nhật bài viết có id: {$id}";
+        // return "Admin: Cập nhật bài viết có id: {$id}";
+        return view('admin.post.update', compact('id'));
     }
 
     /**

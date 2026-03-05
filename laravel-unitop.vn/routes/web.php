@@ -63,6 +63,10 @@ Route::get('/', function () {
 //     return view('demo');
 // });
 
-Route::get('child', function() {
-    return view('child', ['data'=>4, 'post_title'=>'Khóa học Laravel Pro']);
-});
+// Route::get('child', function() {
+//     return view('child', ['data'=>4, 'post_title'=>'Khóa học Laravel Pro']);
+// });
+
+// ======= Exercise View =======
+Route::get('admin/post/show/{id?}', [AdminPostController::class, 'show']);Route::get('admin/post/add', [AdminPostController::class, 'add']);
+Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);

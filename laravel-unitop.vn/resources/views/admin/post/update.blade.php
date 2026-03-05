@@ -6,11 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    @if ($id)
-        <h1>Admin: Chi tiết bài viết có id: {{ $id }}</h1>
-    @else
-        <h1>Admin: Hiển thị danh sách bài viết</h1>
-    @endif
-    
+    <h1>Admin: Cập nhật bài viết có id: {{ $id }}</h1>
 </body>
 </html>
