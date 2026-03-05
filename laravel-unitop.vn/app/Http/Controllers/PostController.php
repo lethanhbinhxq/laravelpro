@@ -94,9 +94,20 @@ class PostController extends Controller
         //         ->orWhere('votes', '<', 20)
         //         ->get();
 
+        // $posts = DB::table('posts')
+        //         ->selectRaw("COUNT(id) as num_posts, user_id")
+        //         ->groupBy('user_id')
+        //         ->get();
+
+        $posts = DB::table('posts')
+                // ->orderBy('votes')
+                -> orderBy('votes', 'desc')
+                ->get();
+
         $posts = DB::table('posts')
                 ->selectRaw("COUNT(id) as num_posts, user_id")
                 ->groupBy('user_id')
+                ->orderBy('num_posts', 'desc')
                 ->get();
         echo "<pre>";
         print_r($posts);
