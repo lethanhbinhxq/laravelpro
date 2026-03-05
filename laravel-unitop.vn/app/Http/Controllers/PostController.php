@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use DB;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -26,9 +27,20 @@ class PostController extends Controller
 
         // Xử lý thêm dữ liệu
         // return redirect('post');
-        return redirect() -> route('post.index');
+        return redirect()->route('post.index');
     }
 
+    public function add()
+    {
+        DB::table('posts')->insert(
+            [
+                'title' => 'Tiêu đề',
+                'description' => 'Mô tả ngắn',
+                'content' => 'Nội dung',
+                'user_id' => 1,
+            ]
+        );
+    }
     /**
      * Store a newly created resource in storage.
      */
