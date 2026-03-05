@@ -81,5 +81,5 @@ Route::get('/', function () {
 //     ]);
 // });
 
-// Route::get('posts/insert', [PostController::class, 'add']);
+Route::get('posts/insert', [PostController::class, 'add']);
 Route::get('posts/show', [PostController::class, 'show']);

@@ -34,9 +34,9 @@ class PostController extends Controller
     {
         DB::table('posts')->insert(
             [
-                'title' => 'Tiêu đề',
-                'description' => 'Mô tả ngắn',
-                'content' => 'Nội dung',
+                'title' => 'Tiêu đề 3',
+                'description' => 'Mô tả ngắn 3',
+                'content' => 'Nội dung 3',
                 'user_id' => 1,
             ]
         );
@@ -63,7 +63,8 @@ class PostController extends Controller
         //     echo "<br>";
         // }
 
-        $post = DB::table('posts')->where('id', 1)->first();
+        // $post = DB::table('posts')->where('id', 1)->first();
+        $post = DB::table('posts')->find(1);
         echo $post->title;
         // print_r($post);
         // return $posts;
