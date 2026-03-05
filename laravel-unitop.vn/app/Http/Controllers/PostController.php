@@ -144,8 +144,11 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete($id)
     {
         //
+        DB::table('posts')
+            ->where('id', $id)
+            ->delete();
     }
 }
