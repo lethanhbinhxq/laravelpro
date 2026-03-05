@@ -67,7 +67,16 @@ Route::get('/', function () {
 //     return view('child', ['data'=>4, 'post_title'=>'Khóa học Laravel Pro']);
 // });
 
-// ======= Exercise View =======
-Route::get('admin/post/show', [AdminPostController::class, 'show']);
-Route::get('admin/post/add', [AdminPostController::class, 'add']);
-Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);
+// // ======= Exercise View =======
+// Route::get('admin/post/show', [AdminPostController::class, 'show']);
+// Route::get('admin/post/add', [AdminPostController::class, 'add']);
+// Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);
+
+Route::get('users/insert', function(){
+    DB::table('users')->insert([
+        'name' => 'Lê Thanh Bình',
+        'email' => 'binhlethanh623@gmail.com',
+        'password' => bcrypt('X1@oq1ng'),
+        
+    ]);
+});
