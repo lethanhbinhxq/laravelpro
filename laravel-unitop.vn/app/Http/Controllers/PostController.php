@@ -64,8 +64,12 @@ class PostController extends Controller
         // }
 
         // $post = DB::table('posts')->where('id', 1)->first();
-        $post = DB::table('posts')->find(1);
-        echo $post->title;
+        // $post = DB::table('posts')->find(1);
+        // echo $post->title;
+
+        echo DB::table('posts')->count();
+        echo "<br>";
+        echo DB::table('posts')->where('user_id', 1)->count();
         // print_r($post);
         // return $posts;
     }
