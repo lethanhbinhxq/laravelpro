@@ -83,3 +83,4 @@ Route::get('users/insert', function(){
 
 Route::get('posts/insert', [PostController::class, 'add']);
 Route::get('posts/show', [PostController::class, 'show']);
+Route::get('posts/update/{id}', [PostController::class, 'update']);
