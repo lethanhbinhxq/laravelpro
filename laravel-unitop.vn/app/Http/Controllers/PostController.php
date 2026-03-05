@@ -99,15 +99,20 @@ class PostController extends Controller
         //         ->groupBy('user_id')
         //         ->get();
 
-        $posts = DB::table('posts')
-                // ->orderBy('votes')
-                -> orderBy('votes', 'desc')
-                ->get();
+        // $posts = DB::table('posts')
+        //         // ->orderBy('votes')
+        //         -> orderBy('votes', 'desc')
+        //         ->get();
+
+        // $posts = DB::table('posts')
+        //         ->selectRaw("COUNT(id) as num_posts, user_id")
+        //         ->groupBy('user_id')
+        //         ->orderBy('num_posts', 'desc')
+        //         ->get();
 
         $posts = DB::table('posts')
-                ->selectRaw("COUNT(id) as num_posts, user_id")
-                ->groupBy('user_id')
-                ->orderBy('num_posts', 'desc')
+                ->offset(2)
+                ->limit(3)
                 ->get();
         echo "<pre>";
         print_r($posts);
