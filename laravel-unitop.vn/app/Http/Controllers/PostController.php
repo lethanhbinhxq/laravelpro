@@ -57,7 +57,7 @@ class PostController extends Controller
         //
         // return "Hiển thị bài viết";
         // $posts = DB::table('posts')->get();
-        // $posts = DB::table('posts')->select('title');
+        // $posts = DB::table('posts')->select('title')->get();
         // foreach ($posts as $post) {
         //     echo $post->title;
         //     echo "<br>";
@@ -71,10 +71,17 @@ class PostController extends Controller
         // echo "<br>";
         // echo DB::table('posts')->where('user_id', 1)->count();
 
-        echo DB::table('posts')->min('id') . "<br>";
-        echo DB::table('posts')->max('id') . "<br>";
-        echo DB::table('posts')->avg('id') . "<br>";
-        // print_r($post);
+        // echo DB::table('posts')->min('id') . "<br>";
+        // echo DB::table('posts')->max('id') . "<br>";
+        // echo DB::table('posts')->avg('id') . "<br>";
+
+        $posts = DB::table('posts')
+                    -> join('users', 'users.id', '=', 'posts.user_id')
+                    -> select('users.name', 'posts.*')
+                    -> get();
+        echo "<pre>";
+        print_r($posts);
+        echo "</pre>";
         // return $posts;
     }
 
