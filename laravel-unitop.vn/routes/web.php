@@ -72,14 +72,14 @@ Route::get('/', function () {
 // Route::get('admin/post/add', [AdminPostController::class, 'add']);
 // Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);
 
-// Route::get('users/insert', function(){
-//     DB::table('users')->insert([
-//         'name' => 'Lê Thanh Bình',
-//         'email' => 'binhlethanh623@gmail.com',
-//         'password' => bcrypt('X1@oq1ng'),
+Route::get('users/insert', function(){
+    DB::table('users')->insert([
+        'name' => 'Thanh Bình Lê',
+        'email' => 'binhlt@chanchinh.vn',
+        'password' => bcrypt('X1@oq1ng'),
 
-//     ]);
-// });
+    ]);
+});
 
 Route::get('posts/insert', [PostController::class, 'add']);
 Route::get('posts/show', [PostController::class, 'show']);
