@@ -67,9 +67,13 @@ class PostController extends Controller
         // $post = DB::table('posts')->find(1);
         // echo $post->title;
 
-        echo DB::table('posts')->count();
-        echo "<br>";
-        echo DB::table('posts')->where('user_id', 1)->count();
+        // echo DB::table('posts')->count();
+        // echo "<br>";
+        // echo DB::table('posts')->where('user_id', 1)->count();
+
+        echo DB::table('posts')->min('id') . "<br>";
+        echo DB::table('posts')->max('id') . "<br>";
+        echo DB::table('posts')->avg('id') . "<br>";
         // print_r($post);
         // return $posts;
     }
