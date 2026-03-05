@@ -52,10 +52,17 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
         //
-        return "Hiển thị bài viết";
+        // return "Hiển thị bài viết";
+        // $posts = DB::table('posts')->get();
+        $posts = DB::table('posts')->select('title');
+        foreach ($posts as $post) {
+            echo $post->title;
+            echo "<br>";
+        }
+        // return $posts;
     }
 
     /**
