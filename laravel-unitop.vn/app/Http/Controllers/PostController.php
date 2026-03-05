@@ -75,10 +75,14 @@ class PostController extends Controller
         // echo DB::table('posts')->max('id') . "<br>";
         // echo DB::table('posts')->avg('id') . "<br>";
 
-        $posts = DB::table('posts')
-                    -> join('users', 'users.id', '=', 'posts.user_id')
-                    -> select('users.name', 'posts.*')
-                    -> get();
+        // $posts = DB::table('posts')
+        //             -> join('users', 'users.id', '=', 'posts.user_id')
+        //             -> select('users.name', 'posts.*')
+        //             -> get();
+
+        // $posts = DB::table('posts')->where('user_id', 1)->get();
+        // $posts = DB::table('posts')->where('user_id', '<', 2)->get();
+        $posts = DB::table('posts')->where('title', 'Like', '%2%')->get();
         echo "<pre>";
         print_r($posts);
         echo "</pre>";
