@@ -82,7 +82,17 @@ class PostController extends Controller
 
         // $posts = DB::table('posts')->where('user_id', 1)->get();
         // $posts = DB::table('posts')->where('user_id', '<', 2)->get();
-        $posts = DB::table('posts')->where('title', 'Like', '%2%')->get();
+        // $posts = DB::table('posts')->where('title', 'Like', '%2%')->get();
+
+        // $posts = DB::table('posts')->where([
+        //     ['title', 'Like', '%3%'],
+        //     ['votes', '<>', '0']
+        // ])->get();
+
+        $posts = DB::table('posts')
+                ->where('id', 2)
+                ->orWhere('votes', '<', 20)
+                ->get();
         echo "<pre>";
         print_r($posts);
         echo "</pre>";
