@@ -211,7 +211,10 @@ class PostController extends Controller
         //         ->get();
 
         // $posts = Post::limit(2)->get();
-        $posts = Post::limit(2)->offset(2)->get();
+        // $posts = Post::limit(2)->offset(2)->get();
+
+        // $posts = Post::withTrashed()->get();
+        $posts = Post::onlyTrashed()->get();
         return $posts;
     }
 }
