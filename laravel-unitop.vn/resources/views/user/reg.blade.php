@@ -25,6 +25,10 @@
                 {!! Form::email('email', '', ['class'=>'form-control']) !!}
             </div>
             <div class="form-group">
+                {!! Form::label('city', 'Thành phố') !!}
+                {!! Form::select('city', [0=>'Chọn',1=>'Hà Nội', 2=>'TP.HCM', 3=>'Đà Nẵng'], '', ['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group">
                 {!! Form::submit('Đăng ký', ['name'=>'sm-reg', 'class'=>'btn btn-dark']) !!}
             </div>
         {!! Form::close() !!}
