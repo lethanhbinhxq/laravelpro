@@ -165,10 +165,13 @@ class PostController extends Controller
 
         // $posts = Post::orderBy('id', 'desc')->get();
 
-        $posts = Post::selectRaw("COUNT(id) as num_posts, user_id")
-                ->groupBy('user_id')
-                ->orderBy('num_posts', 'desc')
-                ->get();
+        // $posts = Post::selectRaw("COUNT(id) as num_posts, user_id")
+        //         ->groupBy('user_id')
+        //         ->orderBy('num_posts', 'desc')
+        //         ->get();
+
+        // $posts = Post::limit(2)->get();
+        $posts = Post::limit(2)->offset(2)->get();
         return $posts;
     }
 }
