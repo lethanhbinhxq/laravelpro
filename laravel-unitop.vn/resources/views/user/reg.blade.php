@@ -62,6 +62,10 @@
                 {!! Form::date('birth', '', ['class'=>'form-control']) !!}
             </div>
             <div class="form-group">
+                {!! Form::label('intro', 'Giới thiệu bản thân') !!}
+                {!! Form::textarea('intro', '', ['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group">
                 {!! Form::submit('Đăng ký', ['name'=>'sm-reg', 'class'=>'btn btn-dark']) !!}
             </div>
         {!! Form::close() !!}
