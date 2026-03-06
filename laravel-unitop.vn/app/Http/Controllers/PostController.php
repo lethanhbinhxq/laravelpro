@@ -154,7 +154,9 @@ class PostController extends Controller
     }
 
     public function read() {
-        $posts = Post::all();
+        // $posts = Post::all();
+
+        $posts = Post::where('user_id', 1)->get();
         return $posts;
     }
 }
