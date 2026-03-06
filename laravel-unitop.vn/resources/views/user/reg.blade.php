@@ -41,6 +41,23 @@
                 </div>
             </div>
             <div class="form-group">
+                {!! Form::label('skills', 'Kỹ năng') !!}
+                <div class="form-check">
+                    {!! Form::checkbox('skills', 'html', '', ['class'=>'form-check-input', 'id'=>'html']) !!}
+                    {!! Form::label('html', 'HTML') !!}
+                </div>
+
+                <div class="form-check">
+                    {!! Form::checkbox('skills', 'css', '', ['class'=>'form-check-input', 'id'=>'css']) !!}
+                    {!! Form::label('css', 'CSS') !!}
+                </div>
+
+                <div class="form-check">
+                    {!! Form::checkbox('skills', 'php', '', ['class'=>'form-check-input', 'id'=>'php']) !!}
+                    {!! Form::label('php', 'PHP') !!}
+                </div>
+            </div>
+            <div class="form-group">
                 {!! Form::submit('Đăng ký', ['name'=>'sm-reg', 'class'=>'btn btn-dark']) !!}
             </div>
         {!! Form::close() !!}
