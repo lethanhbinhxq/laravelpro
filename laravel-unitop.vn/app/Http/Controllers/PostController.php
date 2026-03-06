@@ -224,4 +224,10 @@ class PostController extends Controller
                     ->restore();
 
     }
+
+    function permanentlyDelete($id) {
+        Post::onlyTrashed()
+            ->where('id', $id)
+            ->forceDelete();
+    }
 }

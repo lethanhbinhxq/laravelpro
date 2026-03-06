@@ -106,3 +106,4 @@ Route::get('post/add', action: [PostController::class, 'add']);
 Route::get('post/update/{id}', action: [PostController::class, 'update']);
 Route::get('post/delete/{id}', action: [PostController::class, 'delete']);
 Route::get('post/restore/{id}', action: [PostController::class, 'restore']);
+Route::get('post/permanentlyDelete/{id}', action: [PostController::class, 'permanentlyDelete']);
