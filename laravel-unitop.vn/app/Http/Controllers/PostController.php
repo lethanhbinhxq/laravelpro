@@ -142,11 +142,19 @@ class PostController extends Controller
     public function update($id)
     {
         //
-        DB::table('posts')
-            ->where('id', $id)
-            ->update([
-                'title' => 'Iphone 17'
-            ]);
+        // DB::table('posts')
+        //     ->where('id', $id)
+        //     ->update([
+        //         'title' => 'Iphone 17'
+        //     ]);
+
+        $post = Post::find($id);
+        $post->title = "Laravel Pro 2";
+        $post->content = "Content Laravel Pro 2";
+        $post->user_id = 1;
+        $post->votes = 40;
+        $post->save();
+
     }
 
     /**
