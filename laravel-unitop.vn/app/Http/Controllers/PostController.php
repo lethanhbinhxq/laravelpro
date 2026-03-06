@@ -183,7 +183,11 @@ class PostController extends Controller
         // $post = Post::find($id);
         // $post->delete();
 
-        Post::where('user_id', 1)->delete();
+        // Post::where('user_id', 1)->delete();
+
+        // Post::destroy($id);
+
+        Post::destroy([1, 2, 3]);
     }
 
     public function read() {
