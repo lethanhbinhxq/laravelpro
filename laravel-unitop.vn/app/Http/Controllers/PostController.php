@@ -214,8 +214,11 @@ class PostController extends Controller
         // $posts = Post::limit(2)->offset(2)->get();
 
         // $posts = Post::withTrashed()->get();
-        $posts = Post::onlyTrashed()->get();
-        return $posts;
+        // $posts = Post::onlyTrashed()->get();
+        // return $posts;
+
+        $img = Post::find(1)->FeaturedImage;
+        return $img;
     }
 
     function restore($id) {
