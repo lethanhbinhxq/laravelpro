@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Models\Post;
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,8 +89,14 @@ Route::get('/', function () {
 
 // ======= Exercise Migration =======
 
-Route::get('admin/product/add_category', [AdminProductController::class, 'add_category']);
-Route::get('admin/product/add', [AdminProductController::class, 'add']);
-Route::get('admin/product/show', [AdminProductController::class, 'show']);
-Route::get('admin/product/update/{id}', [AdminProductController::class, 'update']);
-Route::get('admin/product/delete/{id}', [AdminProductController::class, 'delete']);
+// Route::get('admin/product/add_category', [AdminProductController::class, 'add_category']);
+// Route::get('admin/product/add', [AdminProductController::class, 'add']);
+// Route::get('admin/product/show', [AdminProductController::class, 'show']);
+// Route::get('admin/product/update/{id}', [AdminProductController::class, 'update']);
+// Route::get('admin/product/delete/{id}', [AdminProductController::class, 'delete']);
+
+// ======= Eloquent ORM =======
+Route::get('read', function(){
+    $posts = Post::all();
+    return $posts;
+});
