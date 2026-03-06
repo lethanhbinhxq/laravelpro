@@ -180,8 +180,10 @@ class PostController extends Controller
         //     ->where('id', $id)
         //     ->delete();
 
-        $post = Post::find($id);
-        $post->delete();
+        // $post = Post::find($id);
+        // $post->delete();
+
+        Post::where('user_id', 1)->delete();
     }
 
     public function read() {
