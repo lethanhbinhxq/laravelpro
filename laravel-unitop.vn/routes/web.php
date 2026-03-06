@@ -101,4 +101,5 @@ Route::get('/', function () {
 //     return $posts;
 // });
 
-Route::get('post/read', [PostController::class, 'read']);
+Route::get('post/read', action: [PostController::class, 'read']);
+Route::get('post/add', action: [PostController::class, 'add']);

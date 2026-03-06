@@ -33,14 +33,21 @@ class PostController extends Controller
 
     public function add()
     {
-        DB::table('posts')->insert(
-            [
-                'title' => 'Tiêu đề 3',
-                'description' => 'Mô tả ngắn 3',
-                'content' => 'Nội dung 3',
-                'user_id' => 1,
-            ]
-        );
+        // DB::table('posts')->insert(
+        //     [
+        //         'title' => 'Tiêu đề 3',
+        //         'description' => 'Mô tả ngắn 3',
+        //         'content' => 'Nội dung 3',
+        //         'user_id' => 1,
+        //     ]
+        // );
+
+        $post = new Post();
+        $post->title = "Laravel Pro 1";
+        $post->content = "Content Laravel Pro 1";
+        $post->user_id = 1;
+        $post->votes = 20;
+        $post->save();
     }
     /**
      * Store a newly created resource in storage.
