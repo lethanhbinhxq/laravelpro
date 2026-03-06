@@ -155,12 +155,18 @@ class PostController extends Controller
         //         'title' => 'Iphone 17'
         //     ]);
 
-        $post = Post::find($id);
-        $post->title = "Laravel Pro 2";
-        $post->content = "Content Laravel Pro 2";
-        $post->user_id = 1;
-        $post->votes = 40;
-        $post->save();
+        // $post = Post::find($id);
+        // $post->title = "Laravel Pro 2";
+        // $post->content = "Content Laravel Pro 2";
+        // $post->user_id = 1;
+        // $post->votes = 40;
+        // $post->save();
+
+        $post = Post::find($id)
+                    ->update([
+                        'title' => 'Update',
+                        'content' => 'Update Content',
+                    ]);
 
     }
 
