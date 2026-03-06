@@ -161,7 +161,9 @@ class PostController extends Controller
 
         // $post = Post::where('user_id', 1)->first();
         // $post = Post::find(1);
-        $posts = Post::find([2, 4]);
+        // $posts = Post::find([2, 4]);
+
+        $posts = Post::orderBy('id', 'desc')->get();
         return $posts;
     }
 }
