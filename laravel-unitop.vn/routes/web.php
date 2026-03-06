@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\FeaturedImageController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
@@ -110,3 +111,5 @@ Route::get('post/restore/{id}', action: [PostController::class, 'restore']);
 Route::get('post/permanentlyDelete/{id}', action: [PostController::class, 'permanentlyDelete']);
 
 Route::get('images/read', [FeaturedImageController::class, 'read']);
+
+Route::get('role/show', [RoleController::class, 'show']);
