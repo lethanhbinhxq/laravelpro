@@ -11,6 +11,15 @@
 <body>
     <div class="container">
         <h1>Thêm bài viết</h1>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         {!! Form::open(['url'=>'post/store', 'method'=>'GET']) !!}
             <div class="form-group">
                 {!! Form::text('title', '', ['class'=>'form-control', 'placeholder'=>'Tiêu đề']) !!}
