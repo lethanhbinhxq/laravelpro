@@ -29,6 +29,18 @@
                 {!! Form::select('city', [0=>'Chọn',1=>'Hà Nội', 2=>'TP.HCM', 3=>'Đà Nẵng'], '', ['class'=>'form-control']) !!}
             </div>
             <div class="form-group">
+                {!! Form::label('gender', 'Giới tính') !!}
+                <div class="form-check">
+                    {!! Form::radio('gender', 'male', '', ['class'=>'form-check-input', 'id'=>'male']) !!}
+                    {!! Form::label('male', 'Nam') !!}
+                </div>
+
+                <div class="form-check">
+                    {!! Form::radio('gender', 'female', '', ['class'=>'form-check-input', 'id'=>'female']) !!}
+                    {!! Form::label('female', 'Nữ') !!}
+                </div>
+            </div>
+            <div class="form-group">
                 {!! Form::submit('Đăng ký', ['name'=>'sm-reg', 'class'=>'btn btn-dark']) !!}
             </div>
         {!! Form::close() !!}
