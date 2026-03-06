@@ -58,6 +58,10 @@
                 </div>
             </div>
             <div class="form-group">
+                {!! Form::label('birth', 'Ngày sinh') !!}
+                {!! Form::date('birth', '', ['class'=>'form-control']) !!}
+            </div>
+            <div class="form-group">
                 {!! Form::submit('Đăng ký', ['name'=>'sm-reg', 'class'=>'btn btn-dark']) !!}
             </div>
         {!! Form::close() !!}
