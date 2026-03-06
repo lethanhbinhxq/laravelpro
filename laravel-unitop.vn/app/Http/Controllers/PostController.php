@@ -176,9 +176,12 @@ class PostController extends Controller
     public function delete($id)
     {
         //
-        DB::table('posts')
-            ->where('id', $id)
-            ->delete();
+        // DB::table('posts')
+        //     ->where('id', $id)
+        //     ->delete();
+
+        $post = Post::find($id);
+        $post->delete();
     }
 
     public function read() {

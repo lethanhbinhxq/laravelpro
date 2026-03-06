@@ -104,3 +104,4 @@ Route::get('/', function () {
 Route::get('post/read', action: [PostController::class, 'read']);
 Route::get('post/add', action: [PostController::class, 'add']);
 Route::get('post/update/{id}', action: [PostController::class, 'update']);
+Route::get('post/delete/{id}', action: [PostController::class, 'delete']);
