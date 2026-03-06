@@ -187,7 +187,10 @@ class PostController extends Controller
 
         // Post::destroy($id);
 
-        Post::destroy([1, 2, 3]);
+        // Post::destroy([1, 2, 3]);
+
+        $post = Post::find($id);
+        $post->delete();
     }
 
     public function read() {
