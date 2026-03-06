@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    function posts() {
+        return $this->hasMany('App\Models\Post');
+    }
+
+    function roles() {
+        return $this->hasMany('App\Models\Role');
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\User;
 use DB;
 use Illuminate\Http\Request;
 
@@ -217,8 +218,13 @@ class PostController extends Controller
         // $posts = Post::onlyTrashed()->get();
         // return $posts;
 
-        $img = Post::find(1)->FeaturedImage;
-        return $img;
+        // $img = Post::find(1)->FeaturedImage;
+        // return $img;
+
+        $user = Post::find(2)->user;
+
+        $posts = User::find(1)->posts;
+        return $posts;
     }
 
     function restore($id) {

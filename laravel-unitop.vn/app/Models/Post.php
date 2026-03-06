@@ -13,4 +13,8 @@ class Post extends Model
     function FeaturedImage() {
         return $this->hasOne('App\Models\FeaturedImage');
     }
+
+    function user() {
+        return $this->belongsTo('App\Models\User');
+    }
 }
