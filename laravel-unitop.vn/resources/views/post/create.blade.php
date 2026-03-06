@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>Thêm bài viết</h1>
-        <form action="post/add" method="POST">
+        {!! Form::open(['url'=>'post/store', 'method'=>'POST']) !!}
             <div class="form-group">
                 <input type="text" name="title" placeholder="Tiêu đề" class="form-control">
             </div>
@@ -22,7 +22,7 @@
             <div class="form-group">
                 <input type="submit" value="Submit" name="sm-add">
             </div>
-        </form>
+        {!! Form::close() !!}
     </div>
 </body>
 
