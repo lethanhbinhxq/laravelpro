@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPostController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdminProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
@@ -72,16 +72,24 @@ Route::get('/', function () {
 // Route::get('admin/post/add', [AdminPostController::class, 'add']);
 // Route::get('admin/post/update/{id}', [AdminPostController::class, 'update']);
 
-Route::get('users/insert', function(){
-    DB::table('users')->insert([
-        'name' => 'Thanh Bình Lê',
-        'email' => 'binhlt@chanchinh.vn',
-        'password' => bcrypt('X1@oq1ng'),
+// Route::get('users/insert', function(){
+//     DB::table('users')->insert([
+//         'name' => 'Thanh Bình Lê',
+//         'email' => 'binhlt@chanchinh.vn',
+//         'password' => bcrypt('X1@oq1ng'),
 
-    ]);
-});
+//     ]);
+// });
 
-Route::get('posts/insert', [PostController::class, 'add']);
-Route::get('posts/show', [PostController::class, 'show']);
-Route::get('posts/update/{id}', [PostController::class, 'update']);
-Route::get('posts/delete/{id}', [PostController::class, 'delete']);
+// Route::get('posts/insert', [PostController::class, 'add']);
+// Route::get('posts/show', [PostController::class, 'show']);
+// Route::get('posts/update/{id}', [PostController::class, 'update']);
+// Route::get('posts/delete/{id}', [PostController::class, 'delete']);
+
+// ======= Exercise Migration =======
+
+Route::get('admin/product/add_category', [AdminProductController::class, 'add_category']);
+Route::get('admin/product/add', [AdminProductController::class, 'add']);
+Route::get('admin/product/show', [AdminProductController::class, 'show']);
+Route::get('admin/product/update/{id}', [AdminProductController::class, 'update']);
+Route::get('admin/product/delete/{id}', [AdminProductController::class, 'delete']);
