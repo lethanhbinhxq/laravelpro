@@ -19,7 +19,7 @@
                 {!! Form::textarea('content', '', ['class'=>'form-control', 'placeholder'=>'Nội dung']) !!}
             </div>
             <div class="form-group">
-                {!! Form::submit('Thêm mới', ['name'=>'sm-add']) !!}
+                {!! Form::submit('Thêm mới', ['name'=>'sm-add', 'class'=>'btn btn-dark']) !!}
             </div>
         {!! Form::close() !!}
     </div>
