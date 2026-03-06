@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,13 +13,13 @@
         <h1>Thêm bài viết</h1>
         {!! Form::open(['url'=>'post/store', 'method'=>'POST']) !!}
             <div class="form-group">
-                <input type="text" name="title" placeholder="Tiêu đề" class="form-control">
+                {!! Form::text('title', '', ['class'=>'form-control', 'placeholder'=>'Tiêu đề']) !!}
             </div>
             <div class="form-group">
-                <textarea name="content" id="content" placeholder="Nội dung" class="form-control"></textarea>
+                {!! Form::textarea('content', '', ['class'=>'form-control', 'placeholder'=>'Nội dung']) !!}
             </div>
             <div class="form-group">
-                <input type="submit" value="Submit" name="sm-add">
+                {!! Form::submit('Thêm mới', ['name'=>'sm-add']) !!}
             </div>
         {!! Form::close() !!}
     </div>
