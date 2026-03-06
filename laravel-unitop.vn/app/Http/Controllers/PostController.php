@@ -29,7 +29,9 @@ class PostController extends Controller
 
         // Xử lý thêm dữ liệu
         // return redirect('post');
-        return redirect()->route('post.index');
+        // return redirect()->route('post.index');
+
+        return view('post.create');
     }
 
     public function add()

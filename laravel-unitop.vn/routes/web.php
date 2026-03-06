@@ -103,13 +103,16 @@ Route::get('/', function () {
 //     return $posts;
 // });
 
-Route::get('post/read', action: [PostController::class, 'read']);
-Route::get('post/add', action: [PostController::class, 'add']);
-Route::get('post/update/{id}', action: [PostController::class, 'update']);
-Route::get('post/delete/{id}', action: [PostController::class, 'delete']);
-Route::get('post/restore/{id}', action: [PostController::class, 'restore']);
-Route::get('post/permanentlyDelete/{id}', action: [PostController::class, 'permanentlyDelete']);
+// Route::get('post/read', action: [PostController::class, 'read']);
+// Route::get('post/add', action: [PostController::class, 'add']);
+// Route::get('post/update/{id}', action: [PostController::class, 'update']);
+// Route::get('post/delete/{id}', action: [PostController::class, 'delete']);
+// Route::get('post/restore/{id}', action: [PostController::class, 'restore']);
+// Route::get('post/permanentlyDelete/{id}', action: [PostController::class, 'permanentlyDelete']);
 
-Route::get('images/read', [FeaturedImageController::class, 'read']);
+// Route::get('images/read', [FeaturedImageController::class, 'read']);
 
-Route::get('role/show', [RoleController::class, 'show']);
+// Route::get('role/show', [RoleController::class, 'show']);
+
+// ======= Form =======
+Route::get('post/add', [PostController::class, 'create']);
