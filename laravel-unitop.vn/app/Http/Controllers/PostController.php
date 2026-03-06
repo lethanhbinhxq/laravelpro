@@ -163,7 +163,12 @@ class PostController extends Controller
         // $post = Post::find(1);
         // $posts = Post::find([2, 4]);
 
-        $posts = Post::orderBy('id', 'desc')->get();
+        // $posts = Post::orderBy('id', 'desc')->get();
+
+        $posts = Post::selectRaw("COUNT(id) as num_posts, user_id")
+                ->groupBy('user_id')
+                ->orderBy('num_posts', 'desc')
+                ->get();
         return $posts;
     }
 }
