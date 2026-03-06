@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('product_cat', function (Blueprint $table) {
             $table->id();
             $table->string('name', 200);
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->foreign('parent_id')->references('id')->on('product_cat')->onDelete('set null');
             $table->timestamps();
         });
     }
