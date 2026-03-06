@@ -116,3 +116,6 @@ Route::get('/', function () {
 
 // ======= Form =======
 Route::get('post/add', [PostController::class, 'create']);
+Route::get('user/reg', function() {
+    return view('user.reg');
+});
