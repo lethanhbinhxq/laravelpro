@@ -42,12 +42,19 @@ class PostController extends Controller
         //     ]
         // );
 
-        $post = new Post();
-        $post->title = "Laravel Pro 1";
-        $post->content = "Content Laravel Pro 1";
-        $post->user_id = 1;
-        $post->votes = 20;
-        $post->save();
+        // $post = new Post();
+        // $post->title = "Laravel Pro 1";
+        // $post->content = "Content Laravel Pro 1";
+        // $post->user_id = 1;
+        // $post->votes = 20;
+        // $post->save();
+
+        Post::create([
+            'title' => "Create 1",
+            'content' => "Content create 1",
+            'user_id' => 1,
+            'votes' => 43
+        ]);
     }
     /**
      * Store a newly created resource in storage.
