@@ -96,7 +96,9 @@ Route::get('/', function () {
 // Route::get('admin/product/delete/{id}', [AdminProductController::class, 'delete']);
 
 // ======= Eloquent ORM =======
-Route::get('read', function(){
-    $posts = Post::all();
-    return $posts;
-});
+// Route::get('post/read', function(){
+//     $posts = Post::all();
+//     return $posts;
+// });
+
+Route::get('post/read', [PostController::class, 'read']);

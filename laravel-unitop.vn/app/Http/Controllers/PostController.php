@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use DB;
 use Illuminate\Http\Request;
 
@@ -150,5 +151,10 @@ class PostController extends Controller
         DB::table('posts')
             ->where('id', $id)
             ->delete();
+    }
+
+    public function read() {
+        $posts = Post::all();
+        return $posts;
     }
 }
