@@ -217,4 +217,11 @@ class PostController extends Controller
         $posts = Post::onlyTrashed()->get();
         return $posts;
     }
+
+    function restore($id) {
+        $posts = Post::onlyTrashed()
+                    ->where('id', $id)
+                    ->restore();
+
+    }
 }
