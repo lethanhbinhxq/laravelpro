@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1>Thêm bài viết</h1>
-        {!! Form::open(['url'=>'post/store', 'method'=>'POST']) !!}
+        {!! Form::open(['url'=>'post/store', 'method'=>'GET']) !!}
             <div class="form-group">
                 {!! Form::text('title', '', ['class'=>'form-control', 'placeholder'=>'Tiêu đề']) !!}
             </div>

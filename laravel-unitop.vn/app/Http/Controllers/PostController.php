@@ -52,19 +52,27 @@ class PostController extends Controller
         // $post->votes = 20;
         // $post->save();
 
-        Post::create([
-            'title' => "Create 1",
-            'content' => "Content create 1",
-            'user_id' => 1,
-            'votes' => 43
-        ]);
+        // Post::create([
+        //     'title' => "Create 1",
+        //     'content' => "Content create 1",
+        //     'user_id' => 1,
+        //     'votes' => 43
+        // ]);
+
+        return view('post.create');
     }
+
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+        return $request->input();
     }
 
     /**
