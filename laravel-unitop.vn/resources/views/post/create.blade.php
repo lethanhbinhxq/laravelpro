@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1>Thêm bài viết</h1>
-        {!! Form::open(['url'=>'post/store', 'method'=>'GET']) !!}
+        {!! Form::open(['url'=>'post/store', 'method'=>'POST', 'files'=>true]) !!}
             <div class="form-group">
                 {!! Form::text('title', '', ['class'=>'form-control', 'placeholder'=>'Tiêu đề']) !!}
                 @error('title')
@@ -23,6 +23,9 @@
                 @error('content')
                     <small class="form-text text-danger">{{$message}}</small>
                 @enderror
+            </div>
+            <div class="form-group">
+                {!! Form::file('file', ['class'=>'form-control-file']) !!}
             </div>
             <div class="form-group">
                 {!! Form::submit('Thêm mới', ['name'=>'sm-add', 'class'=>'btn btn-dark']) !!}

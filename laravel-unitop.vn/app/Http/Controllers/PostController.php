@@ -69,15 +69,28 @@ class PostController extends Controller
     {
         //
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|min:5|max:100',
             'content' => 'required',
         ], [
-            'required' => 'Trường :attribute không được để trống'
+            'required' => ':attribute không được để trống',
+            'min' => ':attribute có độ dài ít nhất :min ký tự',
+            'max' => ':attribute có độ dài tối đa :min ký tự',
         ], [
-            'title' => 'tiêu đề',
-            'content' => 'nội dung'
+            'title' => 'Tiêu đề',
+            'content' => 'Nội dung'
         ]);
-        return $request->input();
+        if ($request->hasFile('file')) {
+            $file = $request->file;
+            // Lấy tên file
+            echo $file->getClientOriginalName();
+            // Lấy đuôi file
+            echo $file->getClientOriginalExtension();
+            // Lấy kích thước file
+            echo $file->getSize();
+
+            $file->move('public/uploads', $file->getClientOriginalName());
+        }
+        // return $request->input();
     }
 
     /**
