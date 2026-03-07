@@ -71,6 +71,11 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
+        ], [
+            'required' => 'Trường :attribute không được để trống'
+        ], [
+            'title' => 'tiêu đề',
+            'content' => 'nội dung'
         ]);
         return $request->input();
     }
