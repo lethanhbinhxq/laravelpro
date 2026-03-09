@@ -47,8 +47,11 @@ class HelperController extends Controller
         // echo $str;
 
         // 6. Lấy chuỗi con
-        $str = "Laravel Pro";
-        echo Str::of($str)->substr(8);
-        echo Str::of($str)->substr(0, 7);
+        // $str = "Laravel Pro";
+        // echo Str::of($str)->substr(8);
+        // echo Str::of($str)->substr(0, 7);
+
+        // 7. Nối chuỗi vào đuôi
+        echo Str::of('Lê Thanh ')->append('Bình');
     }
 }
