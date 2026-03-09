@@ -9,7 +9,7 @@ class Post extends Model
 {
     //
     use SoftDeletes;
-    protected $fillable = ['title', 'content', 'user_id', 'votes'];
+    protected $fillable = ['title', 'content', 'user_id', 'votes', 'thumbnail'];
     function FeaturedImage() {
         return $this->hasOne('App\Models\FeaturedImage');
     }

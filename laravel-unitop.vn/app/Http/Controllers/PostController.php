@@ -79,18 +79,23 @@ class PostController extends Controller
             'title' => 'Tiêu đề',
             'content' => 'Nội dung'
         ]);
+        $input = $request->all();
         if ($request->hasFile('file')) {
             $file = $request->file;
             // Lấy tên file
-            echo $file->getClientOriginalName();
+            $filename = $file->getClientOriginalName();
             // Lấy đuôi file
             echo $file->getClientOriginalExtension();
             // Lấy kích thước file
             echo $file->getSize();
 
             $file->move('public/uploads', $file->getClientOriginalName());
+            $thumbnail = 'public/uploads' . $filename;
+            $input['thumbnail'] = $thumbnail;
         }
         // return $request->input();
+        $input['user_id'] = 2;
+        Post::create($input);
     }
 
     /**
