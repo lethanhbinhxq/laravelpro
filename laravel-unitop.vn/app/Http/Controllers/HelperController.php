@@ -39,7 +39,11 @@ class HelperController extends Controller
         // echo Str::random(10);
 
         // 4. Loại bỏ ký tự dư thừa
-        $str = Str::of('       Unitop.vn         ')->trim();
+        // $str = Str::of('       Unitop.vn         ')->trim();
+        // echo $str;
+
+        // 5. Create slug for friendly url
+        $str = Str::slug('Unitop.vn Học web đi làm');
         echo $str;
     }
 }
