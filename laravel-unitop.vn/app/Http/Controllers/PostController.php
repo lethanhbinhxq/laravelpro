@@ -98,7 +98,7 @@ class PostController extends Controller
         $input['votes'] = 100;
         Post::create($input);
         // return redirect('post/show');
-        return redirect(route('post.show'));
+        return redirect(route('post.show'))->with('status', 'Thêm bài viết thành công');
     }
 
     /**
