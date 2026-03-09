@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HelperController extends Controller
 {
@@ -21,5 +22,11 @@ class HelperController extends Controller
         // 4. Lấy current url
         $url = url()->current();
         echo $url;
+    }
+
+    function string() {
+        // 1. Lấy độ dài của chuỗi
+        $str_1 = "unitop.vn";
+        echo Str::length($str_1);
     }
 }

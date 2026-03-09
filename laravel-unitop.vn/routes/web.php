@@ -120,7 +120,9 @@ Route::get('post/add', action: [PostController::class, 'create']);
 Route::post('post/store', [PostController::class, 'store']);
 Route::get('post/show', [PostController::class, 'show'])->name('post.show');
 
-Route::get('helper/url', [HelperController::class, 'url']);
+Route::get('helper/url', action: [HelperController::class, 'url']);
+Route::get('helper/string', action: [HelperController::class, 'string']);
+
 Route::get('user/reg', function() {
     return view('user.reg');
 });
