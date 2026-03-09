@@ -60,7 +60,11 @@ class HelperController extends Controller
 
         // 9. Cắt chuỗi với một số ký tự cho trước
         // abcd -> ab...
-        $str = "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...";
-        echo Str::of($str)->limit(60);
+        // $str = "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...";
+        // echo Str::of($str)->limit(60);
+
+        // 10. Kiểm tra chuỗi cha chứa chuỗi con
+        $str = "Unitop.vn Học lập trình web đi làm";
+        echo Str::contains($str, "Unitop");
     }
 }
