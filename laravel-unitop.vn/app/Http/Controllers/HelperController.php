@@ -30,9 +30,12 @@ class HelperController extends Controller
         // echo Str::length($str_1);
 
         // 2. In thường, in hoa một chuỗi
-        $str = "Lê Thanh Bình";
-        echo Str::lower($str);
+        // $str = "Lê Thanh Bình";
+        // echo Str::lower($str);
 
-        echo Str::upper($str);
+        // echo Str::upper($str);
+
+        // 3. Random string
+        echo Str::random(10);
     }
 }
