@@ -14,6 +14,9 @@ class SessionController extends Controller
 
     function show(Request $request) {
         // return $request->session()->all();
-        return $request->session()->get('username');
+        // return $request->session()->get('username');
+        if ($request->session()->has('username')) {
+            echo "Đã lưu username vào session";
+        }
     }
 }
