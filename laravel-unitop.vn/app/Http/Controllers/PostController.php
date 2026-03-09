@@ -97,7 +97,8 @@ class PostController extends Controller
         $input['user_id'] = 2;
         $input['votes'] = 100;
         Post::create($input);
-        return redirect('post/show');
+        // return redirect('post/show');
+        return redirect(route('post.show'));
     }
 
     /**
