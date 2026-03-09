@@ -10,7 +10,10 @@ class HelperController extends Controller
     //
     function url() {
         // 1. Tạo url cơ bản
-        $url = url('login');
+        // $url = url('login');
+
+        // 2. Tạo url qua route
+        $url = route('post.show');
         echo $url;
     }
 }
