@@ -55,7 +55,12 @@ class HelperController extends Controller
         // echo Str::of('Lê Thanh ')->append('Bình');
 
         // 8. Tìm kiếm & thay thế chuỗi
-        $str = "Laravel 7x";
-        echo Str::of($str)->replace('7x', '6x');
+        // $str = "Laravel 7x";
+        // echo Str::of($str)->replace('7x', '6x');
+
+        // 9. Cắt chuỗi với một số ký tự cho trước
+        // abcd -> ab...
+        $str = "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...";
+        echo Str::of($str)->limit(60);
     }
 }
