@@ -26,7 +26,13 @@ class HelperController extends Controller
 
     function string() {
         // 1. Lấy độ dài của chuỗi
-        $str_1 = "unitop.vn";
-        echo Str::length($str_1);
+        // $str_1 = "unitop.vn";
+        // echo Str::length($str_1);
+
+        // 2. In thường, in hoa một chuỗi
+        $str = "Lê Thanh Bình";
+        echo Str::lower($str);
+
+        echo Str::upper($str);
     }
 }
