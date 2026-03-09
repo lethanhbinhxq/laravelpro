@@ -13,6 +13,7 @@
         @foreach ($posts as $post)
             <li>
                 <a href="">{{ $post->title }}</a>
+                <p>{{ $post->content }}</p>
                 <img src="{{ asset( $post->thumbnail ) }}" alt="">
             </li>
         @endforeach
