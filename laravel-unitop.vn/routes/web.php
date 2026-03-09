@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\FeaturedImageController;
 use App\Http\Controllers\HelperController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
@@ -126,3 +127,6 @@ Route::get('helper/string', action: [HelperController::class, 'string']);
 Route::get('user/reg', function() {
     return view('user.reg');
 });
+
+Route::get("session/add", [SessionController::class, 'add']);
+Route::get("session/show", [SessionController::class, 'show']);
