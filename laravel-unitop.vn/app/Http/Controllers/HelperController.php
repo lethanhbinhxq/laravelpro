@@ -13,7 +13,10 @@ class HelperController extends Controller
         // $url = url('login');
 
         // 2. Tạo url qua route
-        $url = route('post.show');
+        // $url = route('post.show');
+
+        // 3. Tạo url qua action
+        $url = action([PostController::class, 'store']);
         echo $url;
     }
 }
