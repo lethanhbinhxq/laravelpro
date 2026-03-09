@@ -36,6 +36,10 @@ class HelperController extends Controller
         // echo Str::upper($str);
 
         // 3. Random string
-        echo Str::random(10);
+        // echo Str::random(10);
+
+        // 4. Loại bỏ ký tự dư thừa
+        $str = Str::of('       Unitop.vn         ')->trim();
+        echo $str;
     }
 }
