@@ -170,8 +170,10 @@ class PostController extends Controller
         // print_r($posts);
         // echo "</pre>";
 
-        $posts = Post::all();
-        return view('post.index', compact("posts"));
+        // $posts = Post::all();
+        // return view('post.index', compact("posts"));
+
+        return redirect()->away('https://google.com');
         // return $posts;
     }
 
