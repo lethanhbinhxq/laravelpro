@@ -16,7 +16,10 @@ class HelperController extends Controller
         // $url = route('post.show');
 
         // 3. Tạo url qua action
-        $url = action([PostController::class, 'store']);
+        // $url = action([PostController::class, 'store']);
+
+        // 4. Lấy current url
+        $url = url()->current();
         echo $url;
     }
 }
