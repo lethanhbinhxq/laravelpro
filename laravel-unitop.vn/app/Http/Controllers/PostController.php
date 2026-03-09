@@ -90,11 +90,12 @@ class PostController extends Controller
             echo $file->getSize();
 
             $file->move('public/uploads', $file->getClientOriginalName());
-            $thumbnail = 'public/uploads' . $filename;
+            $thumbnail = 'public/uploads/' . $filename;
             $input['thumbnail'] = $thumbnail;
         }
         // return $request->input();
         $input['user_id'] = 2;
+        $input['votes'] = 100;
         Post::create($input);
     }
 
@@ -159,13 +160,16 @@ class PostController extends Controller
         //         ->orderBy('num_posts', 'desc')
         //         ->get();
 
-        $posts = DB::table('posts')
-                ->offset(2)
-                ->limit(3)
-                ->get();
-        echo "<pre>";
-        print_r($posts);
-        echo "</pre>";
+        // $posts = DB::table('posts')
+        //         ->offset(2)
+        //         ->limit(3)
+        //         ->get();
+        // echo "<pre>";
+        // print_r($posts);
+        // echo "</pre>";
+
+        $posts = Post::all();
+        return view('post.index', compact("posts"));
         // return $posts;
     }
 
