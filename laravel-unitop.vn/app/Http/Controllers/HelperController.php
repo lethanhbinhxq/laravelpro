@@ -52,6 +52,10 @@ class HelperController extends Controller
         // echo Str::of($str)->substr(0, 7);
 
         // 7. Nối chuỗi vào đuôi
-        echo Str::of('Lê Thanh ')->append('Bình');
+        // echo Str::of('Lê Thanh ')->append('Bình');
+
+        // 8. Tìm kiếm & thay thế chuỗi
+        $str = "Laravel 7x";
+        echo Str::of($str)->replace('7x', '6x');
     }
 }
