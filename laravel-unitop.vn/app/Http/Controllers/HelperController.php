@@ -43,7 +43,12 @@ class HelperController extends Controller
         // echo $str;
 
         // 5. Create slug for friendly url
-        $str = Str::slug('Unitop.vn Học web đi làm');
-        echo $str;
+        // $str = Str::slug('Unitop.vn Học web đi làm');
+        // echo $str;
+
+        // 6. Lấy chuỗi con
+        $str = "Laravel Pro";
+        echo Str::of($str)->substr(8);
+        echo Str::of($str)->substr(0, 7);
     }
 }
