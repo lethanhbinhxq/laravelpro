@@ -129,4 +129,5 @@ Route::get('user/reg', function() {
 });
 
 Route::get("session/add", [SessionController::class, 'add']);
+Route::get("session/add_flash", [SessionController::class, 'add_flash']);
 Route::get("session/show", [SessionController::class, 'show']);
