@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\FeaturedImageController;
+use App\Http\Controllers\HelperController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -118,6 +119,8 @@ Route::get('/', function () {
 Route::get('post/add', action: [PostController::class, 'create']);
 Route::post('post/store', [PostController::class, 'store']);
 Route::get('post/show', [PostController::class, 'show'])->name('post.show');
+
+Route::get('helper/url', [HelperController::class, 'url']);
 Route::get('user/reg', function() {
     return view('user.reg');
 });
