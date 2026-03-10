@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminProductController;
+use App\Http\Controllers\CookieController;
 use App\Http\Controllers\FeaturedImageController;
 use App\Http\Controllers\HelperController;
 use App\Http\Controllers\RoleController;
@@ -132,3 +133,6 @@ Route::get("session/add", [SessionController::class, 'add']);
 Route::get("session/add_flash", [SessionController::class, 'add_flash']);
 Route::get("session/show", [SessionController::class, 'show']);
 Route::get("session/delete", [SessionController::class, 'delete']);
+
+Route::get('cookie/set', [CookieController::class, 'set']);
+Route::get('cookie/get', [CookieController::class, 'get']);
