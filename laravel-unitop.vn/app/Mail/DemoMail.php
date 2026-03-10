@@ -16,9 +16,11 @@ class DemoMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public $data;
+    public function __construct($data)
     {
         //
+        $this->data = $data;
     }
 
     /**
@@ -38,10 +40,7 @@ class DemoMail extends Mailable
     {
         return new Content(
             view: 'mails.demo',
-            with: [
-                'name' => 'Lê Thanh Bình',
-                'course' => 'Laravel Pro'
-            ]
+            with: $this->data
         );
     }
 

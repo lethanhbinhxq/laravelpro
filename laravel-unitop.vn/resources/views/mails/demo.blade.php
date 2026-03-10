@@ -1,4 +1,3 @@
 Nội dung email
-
-From: {{ $name }}
-In course: {{ $course }}
+<br>
+{{ $key1 }}

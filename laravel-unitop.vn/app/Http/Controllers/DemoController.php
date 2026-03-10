@@ -14,7 +14,10 @@ class DemoController extends Controller
     function sendMail()
     {
         try {
-            Mail::to('binhlethanh623@gmail.com')->send(new DemoMail());
+            $data = [
+                'key1' => "value1"
+            ];
+            Mail::to('binhlethanh623@gmail.com')->send(new DemoMail($data));
             return "Mail sent successfully";
         } catch (Exception $e) {
             return $e->getMessage();
