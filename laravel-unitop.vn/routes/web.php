@@ -140,7 +140,3 @@ Route::get('cookie/get', [CookieController::class, 'get']);
 
 Route::get('demo/sendMail', [DemoController::class, 'sendMail']);
 Route::get('demo/viewMail', [DemoController::class, 'viewMail']);
-
- Route::group(['prefix' => 'laravel-filemanager'], function () {
-     \UniSharp\LaravelFilemanager\Lfm::routes();
- });
