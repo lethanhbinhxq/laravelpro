@@ -177,11 +177,13 @@ class PostController extends Controller
         // $posts = DB::table('posts')->simplePaginate(4);
 
         // ORM
-        // $posts = Post::paginate(5);
+        $posts = Post::paginate(5);
+
+        $posts->withPath('demo/show');
         // $posts = Post::simplePaginate(5);
-        $posts = Post::where('id', '>', '5')
-                    ->orderBy('id', 'desc')
-                    ->paginate(3);
+        // $posts = Post::where('id', '>', '5')
+        //             ->orderBy('id', 'desc')
+        //             ->paginate(3);
         return view('post.index', compact("posts"));
 
         // return redirect()->away('https://google.com');
