@@ -174,10 +174,11 @@ class PostController extends Controller
 
         // Query builder
         // $posts = DB::table('posts')->paginate(4);
-        // return view('post.index', compact("posts"));
+        // $posts = DB::table('posts')->simplePaginate(4);
 
         // ORM
-        $posts = Post::paginate(5);
+        // $posts = Post::paginate(5);
+        $posts = Post::simplePaginate(5);
         return view('post.index', compact("posts"));
 
         // return redirect()->away('https://google.com');
