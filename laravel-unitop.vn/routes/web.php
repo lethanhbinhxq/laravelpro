@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\CookieController;
+use App\Http\Controllers\DemoController;
 use App\Http\Controllers\FeaturedImageController;
 use App\Http\Controllers\HelperController;
 use App\Http\Controllers\RoleController;
@@ -136,3 +137,5 @@ Route::get("session/delete", [SessionController::class, 'delete']);
 
 Route::get('cookie/set', [CookieController::class, 'set']);
 Route::get('cookie/get', [CookieController::class, 'get']);
+
+Route::get('demo/sendMail', [DemoController::class, 'sendMail']);
