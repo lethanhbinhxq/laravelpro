@@ -171,9 +171,16 @@ class PostController extends Controller
         // echo "</pre>";
 
         // $posts = Post::all();
+
+        // Query builder
+        // $posts = DB::table('posts')->paginate(4);
         // return view('post.index', compact("posts"));
 
-        return redirect()->away('https://google.com');
+        // ORM
+        $posts = Post::paginate(5);
+        return view('post.index', compact("posts"));
+
+        // return redirect()->away('https://google.com');
         // return $posts;
     }
 

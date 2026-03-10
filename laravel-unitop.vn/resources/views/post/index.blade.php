@@ -25,6 +25,8 @@
         @endforeach
 
     </ul>
+
+    {{ $posts->links() }}
 </body>
 
 </html>
