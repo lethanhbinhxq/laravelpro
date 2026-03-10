@@ -27,7 +27,7 @@ class DemoMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Demo Mail',
+            subject: '[LTB] Thư xác nhận đăng ký khóa học thành công',
         );
     }
 
@@ -38,6 +38,10 @@ class DemoMail extends Mailable
     {
         return new Content(
             view: 'mails.demo',
+            with: [
+                'name' => 'Lê Thanh Bình',
+                'course' => 'Laravel Pro'
+            ]
         );
     }
 
