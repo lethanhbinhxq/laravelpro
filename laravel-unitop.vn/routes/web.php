@@ -139,3 +139,4 @@ Route::get('cookie/set', [CookieController::class, 'set']);
 Route::get('cookie/get', [CookieController::class, 'get']);
 
 Route::get('demo/sendMail', [DemoController::class, 'sendMail']);
+Route::get('demo/viewMail', [DemoController::class, 'viewMail']);

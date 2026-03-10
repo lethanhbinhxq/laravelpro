@@ -23,4 +23,8 @@ class DemoController extends Controller
             return $e->getMessage();
         }
     }
+
+    function viewMail() {
+        return view('mails.demo');
+    }
 }
