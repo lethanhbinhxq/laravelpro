@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProductController::class, 'show']);
 Route::get('cart/show', [CartController::class, 'show']);
+Route::get('cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
