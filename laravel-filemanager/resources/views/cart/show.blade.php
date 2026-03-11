@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        {{-- <div class="row">
+        <div class="row">
             <div class="col-12">
                 <h1>Giỏ hàng</h1>
                 <table class="table">
@@ -18,101 +18,36 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>
-                                <img src="{{ asset('images/product-1.jpg') }}" width="100px" alt="">
-                            </td>
-                            <td scope="col"><a href="">Sản phẩm 1</a></td>
-                            <td scope="col">250.000đ</td>
-                            <td scope="col">
-                                <input type="number" style="width:50px; text-align: center" value="2">
-                            </td>
-                            <td scope="col">500.000đ</td>
-                            <td><a href="" class="text-danger">Xóa</a></td>
-                        </tr>
-                        <tr>
-                            <td scope="row">2</td>
-                            <td>
-                                <img src="{{ asset('images/product-2.jpg') }}" width="100px" alt="">
-                            </td>
-                            <td scope="col"><a href="">Sản phẩm 2</a></td>
-                            <td scope="col">500.000đ</td>
-                            <td scope="col">
-                                <input type="number" style="width:50px; text-align: center" value="1">
-                            </td>
-                            <td scope="col">500.000đ</td>
-                            <td><a href="" class="text-danger">Xóa</a></td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3</td>
-                            <td>
-                                <img src="{{ asset('images/product-3.jpg') }}" width="100px" alt="">
-                            </td>
-                            <td scope="col"><a href="">Sản phẩm 3</a></td>
-                            <td scope="col">1.000.000đ</td>
-                            <td scope="col">
-                                <input type="number" style="width:50px; text-align: center" value="2">
-                            </td>
-                            <td scope="col">2.000.000đ</td>
-                            <td><a href="" class="text-danger">Xóa</a></td>
-                        </tr>
+                        @php
+                        $t = 0;
+                        @endphp
+                        @foreach (Cart::content() as $row)
+                        @php
+                        $t++;
+                        @endphp
+                            <tr>
+                                <td scope="row">{{ $t }}</td>
+                                <td>
+                                    <img src="{{ asset($row->options->thumbnail) }}" width="100px" alt="">
+                                </td>
+                                <td scope="col"><a href="">{{$row->name}}</a></td>
+                                <td scope="col">{{ number_format($row->price, 0, '', '.') }}đ</td>
+                                <td scope="col">
+                                    <input type="number" style="width:50px; text-align: center" value="{{ $row->qty }}">
+                                </td>
+                                <td scope="col">{{number_format($row->total, 0, '', '.')}}đ</td>
+                                <td><a href="" class="text-danger">Xóa</a></td>
+                            </tr>
+                        @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan='6' class="text-right">Tổng:</td>
-                            <td><strong>3.000.000đ</strong></td>
+                            <td><strong>{{Cart::total()}}đ</strong></td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-        </div> --}}
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Qty</th>
-                    <th>Price</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <?php foreach (Cart::content() as $row):?>
-
-                <tr>
-                    <td>
-                        <p><strong><?php    echo $row->name; ?></strong></p>
-                        <p><?php    echo ($row->options->has('size') ? $row->options->size : ''); ?></p>
-                    </td>
-                    <td><input type="text" value="<?php    echo $row->qty; ?>"></td>
-                    <td>$<?php    echo $row->price; ?></td>
-                    <td>$<?php    echo $row->total; ?></td>
-                </tr>
-
-                <?php endforeach;?>
-
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <td colspan="2">&nbsp;</td>
-                    <td>Subtotal</td>
-                    <td><?php echo Cart::subtotal(); ?></td>
-                </tr>
-                <tr>
-                    <td colspan="2">&nbsp;</td>
-                    <td>Tax</td>
-                    <td><?php echo Cart::tax(); ?></td>
-                </tr>
-                <tr>
-                    <td colspan="2">&nbsp;</td>
-                    <td>Total</td>
-                    <td><?php echo Cart::total(); ?></td>
-                </tr>
-            </tfoot>
-        </table>
+        </div>
     </div>
 @endsection

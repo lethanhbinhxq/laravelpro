@@ -15,13 +15,14 @@ class CartController extends Controller
     }
 
     function add(Request $request, $id) {
-        Cart::destroy();
+        // Cart::destroy();
         $product = Product::find($id);
         Cart::add([
             'id' => $id,
             'name' => $product->name,
             'qty' => 1,
             'price' => $product->price,
+            'options' => ['thumbnail' => $product->thumbnail],
         ]);
         return redirect('cart/show');
     }
