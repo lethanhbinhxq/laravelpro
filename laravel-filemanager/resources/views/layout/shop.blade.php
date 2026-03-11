@@ -20,7 +20,7 @@
                         <a href="{{ url('/') }}"><img src="{{ asset('images/logo.png') }}" height="26px" alt=""></a>
                     </div>
                     <div class="col-md-8">
-                        <a href="{{ url('cart/show') }}" class="py-2 d-block float-right text-danger">Giỏ hàng<span class="text-success">(5)</span></a>
+                        <a href="{{ url('cart/show') }}" class="py-2 d-block float-right text-danger">Giỏ hàng<span class="text-success">({{ Cart::count() }})</span></a>
                     </div>
                 </div>
             </div>
