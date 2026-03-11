@@ -36,7 +36,7 @@
                                     <input type="number" style="width:50px; text-align: center" value="{{ $row->qty }}">
                                 </td>
                                 <td scope="col">{{number_format($row->total, 0, '', '.')}}đ</td>
-                                <td><a href="" class="text-danger">Xóa</a></td>
+                                <td><a href="{{ route('cart.remove', $row->rowId) }}" class="text-danger">Xóa</a></td>
                             </tr>
                         @endforeach
                     </tbody>

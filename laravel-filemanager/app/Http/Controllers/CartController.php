@@ -26,4 +26,9 @@ class CartController extends Controller
         ]);
         return redirect('cart/show');
     }
+
+    function remove($rowId) {
+        Cart::remove($rowId);
+        return redirect('cart/show');
+    }
 }
