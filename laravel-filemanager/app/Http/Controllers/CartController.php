@@ -31,4 +31,17 @@ class CartController extends Controller
         Cart::remove($rowId);
         return redirect('cart/show');
     }
+
+    function destroy() {
+        Cart::destroy();
+        return redirect('cart/show');
+    }
+
+    function update(Request $request) {
+        $data = $request->get('qty');
+        foreach($data as $k=>$v) {
+            Cart::update($k, $v);
+        }
+        return redirect('cart/show');
+    }
 }
