@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Giỏ hàng</h1>
+                <p>Hiện tại có {{ Cart::count() }} sản phẩm trong giỏ hàng</p>
                 <table class="table">
                     <thead>
                         <tr>
