@@ -126,7 +126,7 @@ Route::get('post/show', [PostController::class, 'show'])->name('post.show');
 Route::get('helper/url', action: [HelperController::class, 'url']);
 Route::get('helper/string', action: [HelperController::class, 'string']);
 
-Route::get('user/reg', function() {
+Route::get('user/reg', function () {
     return view('user.reg');
 });
 
@@ -140,3 +140,7 @@ Route::get('cookie/get', [CookieController::class, 'get']);
 
 Route::get('demo/sendMail', [DemoController::class, 'sendMail']);
 Route::get('demo/viewMail', [DemoController::class, 'viewMail']);
+
+Route::group(['prefix' => 'laravel-filemanager'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
