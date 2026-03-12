@@ -72,7 +72,7 @@
                             <td><a href="#">Samsung Galaxy A51 (8GB/128GB)</a></td>
                             <td>1</td>
                             <td>7.790.000₫</td>
-                            <td><span class="badge badge-warning">Đang xử lý</span></td>
+                            <td><span class="badge text-bg-warning">Đang xử lý</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
                                 <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
@@ -92,7 +92,7 @@
                             <td><a href="#">Samsung Galaxy A51 (8GB/128GB)</a></td>
                             <td>1</td>
                             <td>7.790.000₫</td>
-                            <td><span class="badge badge-warning">Đang xử lý</span></td>
+                            <td><span class="badge text-bg-warning">Đang xử lý</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
                                 <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
@@ -112,7 +112,7 @@
                             <td><a href="#">Điện thoại iPhone 11 Pro Max 64GB</a></td>
                             <td>1</td>
                             <td>29.490.000₫</td>
-                            <td><span class="badge badge-success">Hoàn thành</span></td>
+                            <td><span class="badge text-bg-success">Hoàn thành</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
                                 <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
@@ -132,7 +132,7 @@
                             <td><a href="#">Apple MacBook Pro Touch 2020 i5 512GB</a></td>
                             <td>1</td>
                             <td>47.990.000₫</td>
-                            <td><span class="badge badge-warning">Đang xử lý</span></td>
+                            <td><span class="badge text-bg-warning">Đang xử lý</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
                                 <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
@@ -152,7 +152,7 @@
                             <td><a href="#">Điện thoại iPhone 11 Pro Max 64GB</a></td>
                             <td>1</td>
                             <td>29.490.000₫</td>
-                            <td><span class="badge badge-success">Hoàn thành</span></td>
+                            <td><span class="badge text-bg-success">Hoàn thành</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
                                 <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
@@ -172,7 +172,7 @@
                             <td><a href="#">Apple MacBook Pro Touch 2020 i5 512GB</a></td>
                             <td>1</td>
                             <td>47.990.000₫</td>
-                            <td><span class="badge badge-success">Hoàn thành</span></td>
+                            <td><span class="badge text-bg-success">Hoàn thành</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
                                 <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"

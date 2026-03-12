@@ -1,8 +1,12 @@
 a {
-    /* color: #787272; */
+    color: #E966A0;
 }
 
-a:hover {
+#sidebar a {
+    color: #FFBDF7;
+}
+
+a, a:hover {
     text-decoration: none;
 }
 
@@ -13,6 +17,9 @@ a:hover {
     margin: 0;
     font-size: 1rem;
     font-weight: 700;
+
+    display: flex;
+    align-items: center;
 }
 
 .topnav {
@@ -90,7 +97,7 @@ ul#sidebar-menu * {
 
 .nav-link.active>a,
 .nav-link:hover>li>a {
-    color: #0061f2;
+    color: #E966A0;
 }
 
 .nav-link>li>a>i {
@@ -144,4 +151,36 @@ ul#sidebar-menu * {
     top: -1px;
     right: -5px;
     color: #8c8c8c;
+}
+
+.bg-pink {
+    background-color: #FF78C4;
+}
+
+.bg-pink-light {
+    background-color: #FFBDF7;
+}
+
+.bg-lavender {
+    background-color: #E1AEFF;
+}
+
+.bg-pink-soft {
+    background-color: #FFECEC;
+}
+
+.text-pink {
+    color: #E966A0;
+}
+
+.text-pink-light {
+    color: #FFBDF7;
+}
+
+.text-lavender {
+    color: #9376E0;
+}
+
+.text-pink-soft {
+    color: #FFECEC;
 }

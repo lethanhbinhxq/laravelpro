@@ -4,42 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/solid.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css" integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>Admintrator</title>
 </head>
 
 <body>
     <div id="warpper" class="nav-fixed">
-        <nav class="topnav shadow navbar-light bg-white d-flex">
-            <div class="navbar-brand"><a href="{{ url('/admin') }}">LTBEAUTY ADMIN</a></div>
+        <nav class="topnav shadow navbar-light bg-pink-light d-flex">
+            <div class="navbar-brand text-pink-soft"><a href="{{ url('/admin') }}"><h3> <span class="badge text-bg-dark">LTBeauty</span> Admin</h3></a></div>
             <div class="nav-right ">
                 <div class="btn-group mr-auto">
                     <button type="button" class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="plus-icon fas fa-plus-circle"></i>
+                        <i class="plus-icon fas fa-plus-circle text-lavender"></i>
                     </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ url('/admin/post/add') }}">Thêm bài viết</a>
-                        <a class="dropdown-item" href="{{ url('/admin/product/add') }}">Thêm sản phẩm</a>
-                        <a class="dropdown-item" href="{{ url('/admin/order') }}">Thêm đơn hàng</a>
+                    <div class="dropdown-menu bg-pink">
+                        <a class="dropdown-item text-pink-soft" href="{{ url('/admin/post/add') }}">Thêm bài viết</a>
+                        <a class="dropdown-item text-pink-soft" href="{{ url('/admin/product/add') }}">Thêm sản phẩm</a>
+                        <a class="dropdown-item text-pink-soft" href="{{ url('/admin/order') }}">Thêm đơn hàng</a>
                     </div>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        PHAN CƯƠNG
+                        Lê Thanh Bình
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Tài khoản</a>
-                        <a class="dropdown-item" href="#">Thoát</a>
+                    <div class="dropdown-menu dropdown-menu-right bg-pink">
+                        <a class="dropdown-item text-pink-soft" href="#">Tài khoản</a>
+                        <a class="dropdown-item text-pink-soft" href="#">Thoát</a>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- end nav  -->
         <div id="page-body" class="d-flex">
-            <div id="sidebar" class="bg-white">
+            <div id="sidebar" class="bg-dark">
                 <ul id="sidebar-menu">
                     <li class="nav-link">
                         <a href="{{ url('/admin') }}">
@@ -56,7 +56,7 @@
                             </div>
                             Trang
                         </a>
-                        <i class="arrow fas fa-angle-right"></i>
+                        <i class="arrow fas fa-angle-right text-pink-light"></i>
 
                         <ul class="sub-menu">
                             <li><a href="{{ url('/admin/page/add') }}">Thêm mới</a></li>
@@ -70,7 +70,7 @@
                             </div>
                             Bài viết
                         </a>
-                        <i class="arrow fas fa-angle-right"></i>
+                        <i class="arrow fas fa-angle-right text-pink-light"></i>
                         <ul class="sub-menu">
                             <li><a href="{{ url('/admin/post/add') }}">Thêm mới</a></li>
                             <li><a href="{{ url('/admin/post') }}">Danh sách</a></li>
@@ -84,7 +84,7 @@
                             </div>
                             Sản phẩm
                         </a>
-                        <i class="arrow fas fa-angle-down"></i>
+                        <i class="arrow fas fa-angle-right text-pink-light"></i>
                         <ul class="sub-menu">
                             <li><a href="{{ url('/admin/product/add') }}">Thêm mới</a></li>
                             <li><a href="{{ url('/admin/product') }}">Danh sách</a></li>
@@ -98,7 +98,7 @@
                             </div>
                             Bán hàng
                         </a>
-                        <i class="arrow fas fa-angle-right"></i>
+                        <i class="arrow fas fa-angle-right text-pink-light"></i>
                         <ul class="sub-menu">
                             <li><a href="{{ url('/admin/order') }}">Đơn hàng</a></li>
                         </ul>
@@ -110,7 +110,7 @@
                             </div>
                             Users
                         </a>
-                        <i class="arrow fas fa-angle-right"></i>
+                        <i class="arrow fas fa-angle-right text-pink-light"></i>
 
                         <ul class="sub-menu">
                             <li><a href="{{ url('/admin/user/add') }}">Thêm mới</a></li>
@@ -124,7 +124,7 @@
                             </div>
                             Phân quyền
                         </a>
-                        <i class="arrow fas fa-angle-right"></i>
+                        <i class="arrow fas fa-angle-down text-pink-light"></i>
                         <ul class="sub-menu">
                             <li><a href="{{ url('/admin/permission') }}">Quyền</a></li>
                             <li><a href="{{ url('/admin/role/add') }}">Thêm vai trò</a></li>
