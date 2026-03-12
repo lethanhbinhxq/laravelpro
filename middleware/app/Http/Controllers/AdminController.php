@@ -17,7 +17,6 @@ class AdminController extends Controller implements HasMiddleware
             // 'CheckAge',
             new Middleware('CheckAge', only: ['index']),
             // new Middleware('CheckAge', except: ['login']),
-            new Middleware('CheckRole', only: ['dashboard']),
         ];
     }
 

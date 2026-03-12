@@ -14,10 +14,10 @@ class CheckRole
      *
      * @param  Closure(Request): (Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, $role): Response
     {
         $user = Auth::user();
-        if ($user->role->name == 'Subscriber') {
+        if ($user->role->name == $role) {
             return redirect('/');
         }
         return $next($request);
