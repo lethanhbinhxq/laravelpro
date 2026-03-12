@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller implements HasMiddleware
 {
@@ -16,10 +17,15 @@ class AdminController extends Controller implements HasMiddleware
             // 'CheckAge',
             new Middleware('CheckAge', only: ['index']),
             // new Middleware('CheckAge', except: ['login']),
+            new Middleware('CheckRole', only: ['dashboard']),
         ];
     }
 
     function index() {
         return view('admin');
+    }
+
+    function dashboard() {
+        return view('dashboard');
     }
 }
