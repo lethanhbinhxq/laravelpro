@@ -4,7 +4,7 @@
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold d-flex justify-content-between align-items-center">
-                <h5 class="m-0 ">Danh sách bài viết</h5>
+                <h5 class="m-0 ">Danh sách trang</h5>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Tìm kiếm">
                     <button class="btn btn-outline-primary" type="submit">
@@ -14,9 +14,9 @@
             </div>
             <div class="card-body">
                 <div class="analytic">
-                    <a href="" class="text-primary">Trạng thái 1<span class="text-muted">(10)</span></a>
-                    <a href="" class="text-primary">Trạng thái 2<span class="text-muted">(5)</span></a>
-                    <a href="" class="text-primary">Trạng thái 3<span class="text-muted">(20)</span></a>
+                    <a href="" class="text-pink">Trạng thái 1<span class="text-muted">(10)</span></a>
+                    <a href="" class="text-pink">Trạng thái 2<span class="text-muted">(5)</span></a>
+                    <a href="" class="text-pink">Trạng thái 3<span class="text-muted">(20)</span></a>
                 </div>
                 <div class="d-flex align-items-center py-3 gap-2">
                     <select class="form-select w-auto">
@@ -53,9 +53,9 @@
                             <td><a href="">Giá xăng sẽ tiếp tục tăng ở mức cao, lần thứ 4 liên tiếp vào ngày mai?</a></td>
                             <td>Tin nóng</td>
                             <td>26:06:2020 14:00</td>
-                            <td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            <td><button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                             </td>
 
@@ -70,9 +70,9 @@
                             </td>
                             <td>Tin nóng</td>
                             <td>26:06:2020 14:00</td>
-                            <td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            <td><button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
@@ -85,9 +85,9 @@
                             <td><a href="">Giá xăng sẽ tiếp tục tăng ở mức cao, lần thứ 4 liên tiếp vào ngày mai?</a></td>
                             <td>Tin nóng</td>
                             <td>26:06:2020 14:00</td>
-                            <td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            <td><button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                             </td>
 
@@ -102,9 +102,9 @@
                             </td>
                             <td>Tin nóng</td>
                             <td>26:06:2020 14:00</td>
-                            <td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            <td><button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
@@ -118,9 +118,9 @@
                             <td><a href="">Giá xăng sẽ tiếp tục tăng ở mức cao, lần thứ 4 liên tiếp vào ngày mai?</a></td>
                             <td>Tin nóng</td>
                             <td>26:06:2020 14:00</td>
-                            <td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            <td><button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                             </td>
 
@@ -137,9 +137,9 @@
                             </td>
                             <td>Tin nóng</td>
                             <td>26:06:2020 14:00</td>
-                            <td><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip"
+                            <td><button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip"
                                     data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
@@ -151,8 +151,8 @@
                     <ul class="pagination">
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">Trước</span>
-                                <span class="sr-only">Sau</span>
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Prev</span>
                             </a>
                         </li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>

@@ -185,6 +185,68 @@ ul#sidebar-menu * {
     color: #FFECEC;
 }
 
-.page-link {
-    color: #E966A0 !important;
+.btn-outline-primary {
+    --bs-btn-color: #E966A0;
+    --bs-btn-border-color: #E966A0;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #E966A0;
+    --bs-btn-hover-border-color: #E966A0;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #E966A0;
+    --bs-btn-active-border-color: #E966A0;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #E966A0;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #E966A0;
+    --bs-gradient: none;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #FF78C4;
+    --bs-btn-border-color: #FF78C4;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #FF78C4;
+    --bs-btn-hover-border-color: #FF78C4;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #FF78C4;
+    --bs-btn-active-border-color: #FF78C4;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #FF78C4;
+    --bs-btn-disabled-border-color: #FF78C4;
+}
+
+.pagination {
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-y: 0.375rem;
+    --bs-pagination-font-size: 1rem;
+    --bs-pagination-color: #d996ff;
+    --bs-pagination-bg: white;
+    --bs-pagination-border-color: #d996ff;
+    --bs-pagination-hover-color: white;
+    --bs-pagination-hover-bg: #d996ff;
+    --bs-pagination-hover-border-color: #d996ff;
+    --bs-pagination-focus-color: white;
+    --bs-pagination-focus-bg: #d996ff;
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(253, 13, 213, 0.25);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #d996ff;
+    --bs-pagination-active-border-color: #d996ff;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.form-control:focus {
+    border-color: #fe86c8;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(253, 13, 149, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #E966A0;
+    border-color: #E966A0;
 }

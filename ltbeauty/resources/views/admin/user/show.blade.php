@@ -6,25 +6,30 @@
             <div class="card-header font-weight-bold d-flex justify-content-between align-items-center">
                 <h5 class="m-0 ">Danh sách thành viên</h5>
                 <div class="form-search form-inline">
-                    <form action="#">
-                        <input type="" class="form-control form-search" placeholder="Tìm kiếm">
-                        <input type="submit" name="btn-search" value="Tìm kiếm" class="btn btn-primary">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm">
+                        <button class="btn btn-outline-primary" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
             </div>
             <div class="card-body">
                 <div class="analytic">
-                    <a href="" class="text-primary">Trạng thái 1<span class="text-muted">(10)</span></a>
-                    <a href="" class="text-primary">Trạng thái 2<span class="text-muted">(5)</span></a>
-                    <a href="" class="text-primary">Trạng thái 3<span class="text-muted">(20)</span></a>
+                    <a href="" class="text-pink">Trạng thái 1<span class="text-muted">(10)</span></a>
+                    <a href="" class="text-pink">Trạng thái 2<span class="text-muted">(5)</span></a>
+                    <a href="" class="text-pink">Trạng thái 3<span class="text-muted">(20)</span></a>
                 </div>
-                <div class="form-action form-inline py-3">
-                    <select class="form-control mr-1" id="">
+                <div class="d-flex align-items-center py-3 gap-2">
+                    <select class="form-select w-auto">
                         <option>Chọn</option>
                         <option>Tác vụ 1</option>
                         <option>Tác vụ 2</option>
                     </select>
-                    <input type="submit" name="btn-search" value="Áp dụng" class="btn btn-primary">
+
+                    <button type="submit" class="btn btn-primary">
+                        Áp dụng
+                    </button>
                 </div>
                 <table class="table table-striped table-checkall">
                     <thead>
@@ -53,9 +58,9 @@
                             <td>Admintrator</td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -71,9 +76,9 @@
                             <td>Editor</td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -89,9 +94,9 @@
                             <td>Editor</td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
