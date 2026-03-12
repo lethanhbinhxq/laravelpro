@@ -44,7 +44,7 @@
                     <li class="nav-link">
                         <a href="{{ url('/admin') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-solid fa-chart-line"></i>
                             </div>
                             Dashboard
                         </a>
@@ -52,7 +52,7 @@
                     <li class="nav-link">
                         <a href="{{ url('/admin/page') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-regular fa-file"></i>
                             </div>
                             Trang
                         </a>
@@ -66,7 +66,7 @@
                     <li class="nav-link">
                         <a href="{{ url('/admin/post') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-regular fa-newspaper"></i>
                             </div>
                             Bài viết
                         </a>
@@ -80,7 +80,7 @@
                     <li class="nav-link">
                         <a href="{{ url('/admin/product') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-solid fa-cube"></i>
                             </div>
                             Sản phẩm
                         </a>
@@ -94,7 +94,7 @@
                     <li class="nav-link">
                         <a href="{{ url('/admin/order') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-solid fa-tags"></i>
                             </div>
                             Bán hàng
                         </a>
@@ -106,9 +106,9 @@
                     <li class="nav-link">
                         <a href="{{ url('/admin/user') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-regular fa-user"></i>
                             </div>
-                            Users
+                            Người dùng
                         </a>
                         <i class="arrow fas fa-angle-right text-pink-light"></i>
 
@@ -120,7 +120,7 @@
                     <li class="nav-link active">
                         <a href="{{ url('/admin/permission') }}">
                             <div class="nav-link-icon d-inline-flex">
-                                <i class="far fa-folder"></i>
+                                <i class="fa-solid fa-unlock"></i>
                             </div>
                             Phân quyền
                         </a>

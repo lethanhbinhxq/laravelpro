@@ -4,7 +4,7 @@
     <div class="container-fluid py-5">
         <div class="row">
             <div class="col">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card text-white bg-pink mb-3" style="max-width: 18rem;">
                     <div class="card-header">ĐƠN HÀNG THÀNH CÔNG</div>
                     <div class="card-body">
                         <h5 class="card-title">2.680</h5>
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card text-white bg-lavender mb-3" style="max-width: 18rem;">
                     <div class="card-header">ĐANG XỬ LÝ</div>
                     <div class="card-body">
                         <h5 class="card-title">10</h5>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="col">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                <div class="card text-white bg-pink-light mb-3" style="max-width: 18rem;">
                     <div class="card-header">DOANH SỐ</div>
                     <div class="card-body">
                         <h5 class="card-title">2.5 tỷ</h5>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
                     <div class="card-header">ĐƠN HÀNG HỦY</div>
                     <div class="card-body">
                         <h5 class="card-title">125</h5>
@@ -75,9 +75,9 @@
                             <td><span class="badge text-bg-warning">Đang xử lý</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -95,9 +95,9 @@
                             <td><span class="badge text-bg-warning">Đang xử lý</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -115,9 +115,9 @@
                             <td><span class="badge text-bg-success">Hoàn thành</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -135,9 +135,9 @@
                             <td><span class="badge text-bg-warning">Đang xử lý</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -155,9 +155,9 @@
                             <td><span class="badge text-bg-success">Hoàn thành</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>
@@ -175,9 +175,9 @@
                             <td><span class="badge text-bg-success">Hoàn thành</span></td>
                             <td>26:06:2020 14:00</td>
                             <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-0 text-white" type="button"
+                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                     data-toggle="tooltip" data-placement="top" title="Delete"><i
                                         class="fa fa-trash"></i></a>
                             </td>

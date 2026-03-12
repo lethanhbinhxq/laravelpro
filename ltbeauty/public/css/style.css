@@ -184,3 +184,7 @@ ul#sidebar-menu * {
 .text-pink-soft {
     color: #FFECEC;
 }
+
+.page-link {
+    color: #E966A0 !important;
+}
