@@ -72,13 +72,12 @@
                                     @endif
                                     <td>{{$user->created_at->format('d/m/Y H:i:s')}}</td>
                                     <td>
-                                        <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
+                                        <a class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                             data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal"
-                                            data-bs-target="#editModal"><i class="fa fa-edit"
-                                            data-id = {{ $user->id }}
-                                            data-name="{{ $user->name }}"
-                                            data-email="{{ $user->email }}"
-                                            data-status="{{ $user->status }}"></i></a>
+                                            data-bs-target="#editModal"
+                                            data-bs-id="{{ $user->id }}"
+                                            data-bs-name="{{ $user->name }}"
+                                            data-bs-status="{{ $user->status }}"><i class="fa fa-edit"></i></a>
                                         <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
                                             data-toggle="tooltip" data-placement="top" title="Delete"><i
                                                 class="fa fa-trash"></i></a>
@@ -88,27 +87,11 @@
                         </tbody>
                     @endif
                 </table>
-
-                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="editModalLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 {{ $users->links() }}
+
+                @include('admin.user.edit')
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/admin.user.js') }}"></script>
 @endsection
