@@ -22,6 +22,15 @@ class EmailVerificationTest extends TestCase
         $response->assertStatus(200);
     }
 
+    public function test_unverified_users_are_redirected_away_from_admin_dashboard(): void
+    {
+        $user = User::factory()->unverified()->create();
+
+        $response = $this->actingAs($user)->get('/admin');
+
+        $response->assertRedirect(route('verification.notice'));
+    }
+
     public function test_email_can_be_verified(): void
     {
         $user = User::factory()->unverified()->create();
@@ -38,6 +47,7 @@ class EmailVerificationTest extends TestCase
 
         Event::assertDispatched(Verified::class);
         $this->assertTrue($user->fresh()->hasVerifiedEmail());
+        $this->assertSame(User::STATUS_ACTIVE, $user->fresh()->status);
         $response->assertRedirect(route('admin', absolute: false).'?verified=1');
     }
 

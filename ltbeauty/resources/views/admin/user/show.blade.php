@@ -16,9 +16,9 @@
             </div>
             <div class="card-body">
                 <div class="analytic">
-                    <a href="" class="text-pink">Trạng thái 1<span class="text-muted">(10)</span></a>
-                    <a href="" class="text-pink">Trạng thái 2<span class="text-muted">(5)</span></a>
-                    <a href="" class="text-pink">Trạng thái 3<span class="text-muted">(20)</span></a>
+                    <a href="" class="text-pink">Đang hoạt động <span class="text-muted">({{ $num_active }})</span></a>
+                    <a href="" class="text-pink">Chờ duyệt <span class="text-muted">({{$num_pending}})</span></a>
+                    <a href="" class="text-pink">Bị chặn <span class="text-muted">({{$num_blocked}})</span></a>
                 </div>
                 <div class="d-flex align-items-center py-3 gap-2">
                     <select class="form-select w-auto">
@@ -32,96 +32,82 @@
                     </button>
                 </div>
                 <table class="table table-striped table-checkall">
-                    <thead>
-                        <tr>
-                            <th>
-                                <input type="checkbox" name="checkall">
-                            </th>
-                            <th scope="col">#</th>
-                            <th scope="col">Họ tên</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Quyền</th>
-                            <th scope="col">Ngày tạo</th>
-                            <th scope="col">Tác vụ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <th scope="row">1</th>
-                            <td>Phan Văn Cương</td>
-                            <td>phancuong</td>
-                            <td>phancuong.qt@gmail.com</td>
-                            <td>Admintrator</td>
-                            <td>26:06:2020 14:00</td>
-                            <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
-                                    data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
-                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
-                                        class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <th scope="row">2</th>
-                            <td>Phan Trần Minh Anh</td>
-                            <td>minhanh</td>
-                            <td>minhanh@gmail.com</td>
-                            <td>Editor</td>
-                            <td>26:06:2020 14:00</td>
-                            <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
-                                    data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
-                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
-                                        class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <th scope="row">3</th>
-                            <td>Nguyễn Hồng Nhung</td>
-                            <td>hongnhung</td>
-                            <td>hongnhung@gmail.com</td>
-                            <td>Editor</td>
-                            <td>26:06:2020 14:00</td>
-                            <td>
-                                <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
-                                    data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
-                                    data-toggle="tooltip" data-placement="top" title="Delete"><i
-                                        class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
+                    @if ($users)
+                        @php
+                            $t = 0;
+                        @endphp
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" name="checkall">
+                                </th>
+                                <th scope="col">#</th>
+                                <th scope="col">Họ tên</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Quyền</th>
+                                <th scope="col">Trạng thái</th>
+                                <th scope="col">Ngày tạo</th>
+                                <th scope="col">Tác vụ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($users as $user)
+                                @php
+                                    $t++;
+                                @endphp
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <th scope="row">{{$t}}</th>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>Admintrator</td>
+                                    @if($user->status == App\Models\User::STATUS_ACTIVE)
+                                        <td><span class="badge text-bg-success">Đang hoạt động</span></td>
+                                    @elseif ($user->status == App\Models\User::STATUS_PENDING)
+                                        <td><span class="badge text-bg-warning">Chờ xác thực</span></td>
+                                    @else
+                                        <td><span class="badge text-bg-danger">Bị khóa</span></td>
+                                    @endif
+                                    <td>{{$user->created_at->format('d/m/Y H:i:s')}}</td>
+                                    <td>
+                                        <a href="#" class="btn btn-success btn-sm rounded-2 text-white" type="button"
+                                            data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal"
+                                            data-bs-target="#editModal"><i class="fa fa-edit"
+                                            data-id = {{ $user->id }}
+                                            data-name="{{ $user->name }}"
+                                            data-email="{{ $user->email }}"
+                                            data-status="{{ $user->status }}"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
+                                            data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    @endif
                 </table>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">Trước</span>
-                                <span class="sr-only">Sau</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{ $users->links() }}
             </div>
         </div>
     </div>

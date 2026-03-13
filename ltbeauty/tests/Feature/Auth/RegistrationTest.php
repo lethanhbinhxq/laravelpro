@@ -26,6 +26,6 @@ class RegistrationTest extends TestCase
         ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(route('admin', absolute: false));
+        $response->assertRedirect(route('verification.notice'));
     }
 }
