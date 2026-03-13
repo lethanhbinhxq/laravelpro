@@ -58,6 +58,14 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('admin/user');
+        return redirect('admin/user')->with('success', 'Cập nhật thông tin người dùng thành công');
+    }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect('admin/user')->with('success', 'Xóa người dùng thành công.');
     }
 }

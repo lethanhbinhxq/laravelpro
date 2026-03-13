@@ -72,15 +72,15 @@
                                     @endif
                                     <td>{{$user->created_at->format('d/m/Y H:i:s')}}</td>
                                     <td>
-                                        <a class="btn btn-success btn-sm rounded-2 text-white" type="button"
+                                        <button class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                             data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal"
-                                            data-bs-target="#editModal"
-                                            data-bs-id="{{ $user->id }}"
-                                            data-bs-name="{{ $user->name }}"
-                                            data-bs-status="{{ $user->status }}"><i class="fa fa-edit"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
-                                            data-toggle="tooltip" data-placement="top" title="Delete"><i
-                                                class="fa fa-trash"></i></a>
+                                            data-bs-target="#editModal" data-bs-id="{{ $user->id }}"
+                                            data-bs-name="{{ $user->name }}" data-bs-status="{{ $user->status }}"><i
+                                                class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-danger btn-sm rounded-2 text-white" type="button"
+                                            data-toggle="tooltip" data-placement="top" title="Delete" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal" data-bs-id="{{ $user->id }}"
+                                            data-bs-name="{{ $user->name }}"><i class="fa fa-trash"></i></button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -90,8 +90,22 @@
                 {{ $users->links() }}
 
                 @include('admin.user.edit')
+                @include('admin.user.delete')
             </div>
         </div>
+
+        @if(session('success'))
+            <div class="toast-container position-fixed top-0 end-0 p-3">
+                <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            {{ session('success') }}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
     <script src="{{ asset('js/admin.user.js') }}"></script>
 @endsection

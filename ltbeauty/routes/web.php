@@ -45,6 +45,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('admin/user', [UserController::class, 'show']);
     Route::get('admin/user/add', [UserController::class, 'add']);
     Route::post('admin/user/update/{id}', [UserController::class, 'update'])->name('admin.user.update');
+    Route::delete('admin/user/delete/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
 })->middleware(['auth', 'verified']);
 
 Route::get('/email/verify', function () {
