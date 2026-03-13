@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -12,6 +13,38 @@ class UserController extends Controller
     public function add()
     {
         return view('admin.user.add');
+    }
+
+    public function insert(Request $request)
+    {
+        $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|min:6|confirmed',
+            ],
+            [
+                'required' => ':attribute không được để trống.',
+                'email.email' => 'Email không hợp lệ.',
+                'email.unique' => 'Email đã tồn tại.',
+                'min' => ':attribute phải có ít nhất :min ký tự.',
+                'confirmed' => 'Mật khẩu xác nhận không khớp.',
+            ],
+            [
+                'name' => 'Họ và tên',
+                'email' => 'Email',
+                'password' => 'Mật khẩu',
+            ]
+        );
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'status' => User::STATUS_PENDING,
+        ]);
+
+        return redirect('admin/user')->with('success', 'Thêm người dùng thành công');
     }
 
     public function show()

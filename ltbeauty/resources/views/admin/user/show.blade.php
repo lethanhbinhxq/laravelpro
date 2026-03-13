@@ -17,8 +17,8 @@
             <div class="card-body">
                 <div class="analytic">
                     <a href="" class="text-pink">Đang hoạt động <span class="text-muted">({{ $num_active }})</span></a>
-                    <a href="" class="text-pink">Chờ duyệt <span class="text-muted">({{$num_pending}})</span></a>
-                    <a href="" class="text-pink">Bị chặn <span class="text-muted">({{$num_blocked}})</span></a>
+                    <a href="" class="text-pink">Chờ xác thực <span class="text-muted">({{$num_pending}})</span></a>
+                    <a href="" class="text-pink">Bị khóa <span class="text-muted">({{$num_blocked}})</span></a>
                 </div>
                 <div class="d-flex align-items-center py-3 gap-2">
                     <select class="form-select w-auto">
@@ -70,7 +70,7 @@
                                     @else
                                         <td><span class="badge text-bg-danger">Bị khóa</span></td>
                                     @endif
-                                    <td>{{$user->created_at->format('d/m/Y H:i:s')}}</td>
+                                    <td>{{ $user->created_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i:s') }}</td>
                                     <td>
                                         <button class="btn btn-success btn-sm rounded-2 text-white" type="button"
                                             data-toggle="tooltip" data-placement="top" title="Edit" data-bs-toggle="modal"

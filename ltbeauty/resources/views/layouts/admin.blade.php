@@ -24,7 +24,7 @@
                 </a></div>
             <div class="nav-right ">
                 <div class="btn-group mr-auto">
-                    <button type="button" class="btn dropdown" data-toggle="dropdown" aria-haspopup="true"
+                    <button type="button" class="btn dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="plus-icon fas fa-plus-circle text-lavender"></i>
                     </button>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         {{ Auth::user()->name }}
                     </button>

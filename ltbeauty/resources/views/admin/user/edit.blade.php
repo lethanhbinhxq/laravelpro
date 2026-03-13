@@ -34,7 +34,7 @@
                             <option>-----Chọn trạng thái-----</option>
                             <option value="{{ App\Models\User::STATUS_ACTIVE }}">Đang hoạt động</option>
                             <option value="{{ App\Models\User::STATUS_PENDING }}">Chờ duyệt</option>
-                            <option value="{{ App\Models\User::STATUS_BLOCKED }}">Bị chặn</option>
+                            <option value="{{ App\Models\User::STATUS_BLOCKED }}">Bị khóa</option>
                         </select>
                         @error('status')
                             <small class="form-text text-danger">{{$message}}</small>
