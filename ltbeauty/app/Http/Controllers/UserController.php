@@ -47,9 +47,12 @@ class UserController extends Controller
         return redirect('admin/user')->with('success', 'Thêm người dùng thành công');
     }
 
-    public function show()
+    public function show(Request $request)
     {
-        $users = User::paginate(10);
+        if ($request) {
+            $users = User::where('name', 'like', '%' . $request->keyword . '%');
+        }
+        $users = $users->paginate(10);
         $num_active = User::where('status', User::STATUS_ACTIVE)->count();
         $num_pending = User::where('status', User::STATUS_PENDING)->count();
         $num_blocked = User::where('status', User::STATUS_BLOCKED)->count();

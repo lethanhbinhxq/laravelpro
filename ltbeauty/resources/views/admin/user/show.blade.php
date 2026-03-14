@@ -6,8 +6,8 @@
             <div class="card-header font-weight-bold d-flex justify-content-between align-items-center">
                 <h5 class="m-0 ">Danh sách thành viên</h5>
                 <div class="form-search form-inline">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm">
+                    <form class="d-flex" role="search" method="GET" action="">
+                        <input class="form-control me-2" type="search" placeholder="Tìm kiếm" name="keyword" value="{{ request('keyword') }}">
                         <button class="btn btn-outline-primary" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -87,7 +87,7 @@
                         </tbody>
                     @endif
                 </table>
-                {{ $users->links() }}
+                {{ $users->appends(request()->query())->links() }}
 
                 @include('admin.user.edit')
                 @include('admin.user.delete')
